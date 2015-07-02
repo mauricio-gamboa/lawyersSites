@@ -271,6 +271,58 @@ Buttons Styles
 Main Menu Styles
 ****************************
 ***************************/
+.white-menu {
+  transition: background 0.5s ease;
+  border-top: 3px solid #e61919;
+  background: white;
+  box-shadow: 0 0 5px -1px #000000;
+}
+.white-menu .menu-wrapper {
+  padding: 10px 0;
+}
+.white-menu .menu-wrapper .toggler {
+  background: url('../images/bg-toggler.jpg') repeat-x 0 0;
+}
+.white-menu .menu-wrapper .toggler:hover {
+  background-position: 0 -42px;
+}
+.white-menu .menu-wrapper .logo a {
+  background: url('../images/logo-color.png') no-repeat 0 0;
+}
+.white-menu .menu-wrapper .main-menu li a {
+  color: #214186;
+}
+.white-menu .menu-wrapper .main-menu li a:hover {
+  color: #3263cd;
+}
+.white-menu .menu-wrapper .main-menu li.sub-menu:hover a {
+  color: white;
+}
+.white-menu .menu-wrapper .main-menu li.sub-menu ul li a {
+  color: rgba(255, 255, 255, 0.8);
+}
+.white-menu .menu-wrapper .main-menu li.sub-menu ul li a:hover {
+  color: white;
+}
+.white-menu .menu-wrapper .main-menu-mobile {
+  top: 70px;
+}
+.white-menu .menu-wrapper .call .phone-icon {
+  font-size: 22px;
+  color: white;
+  background-color: #e61919;
+  height: 36px;
+  width: 36px;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 100%;
+}
+.white-menu .menu-wrapper .call > span > span {
+  color: #243c95;
+}
+.white-menu .menu-wrapper .call > span > span.phone {
+  color: #e61919;
+}
 #main-menu {
   background: url('../images/bg-lines-1.jpg') repeat-x 0 0;
   position: fixed;
@@ -330,9 +382,68 @@ Main Menu Styles
 #main-menu.white .menu-wrapper .call > span > span.phone {
   color: #e61919;
 }
+@media (max-width: 767px) {
+  #main-menu {
+    transition: background 0.5s ease;
+    border-top: 3px solid #e61919;
+    background: white;
+    box-shadow: 0 0 5px -1px #000000;
+  }
+  #main-menu .menu-wrapper {
+    padding: 10px 0;
+  }
+  #main-menu .menu-wrapper .toggler {
+    background: url('../images/bg-toggler.jpg') repeat-x 0 0;
+  }
+  #main-menu .menu-wrapper .toggler:hover {
+    background-position: 0 -42px;
+  }
+  #main-menu .menu-wrapper .logo a {
+    background: url('../images/logo-color.png') no-repeat 0 0;
+  }
+  #main-menu .menu-wrapper .main-menu li a {
+    color: #214186;
+  }
+  #main-menu .menu-wrapper .main-menu li a:hover {
+    color: #3263cd;
+  }
+  #main-menu .menu-wrapper .main-menu li.sub-menu:hover a {
+    color: white;
+  }
+  #main-menu .menu-wrapper .main-menu li.sub-menu ul li a {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  #main-menu .menu-wrapper .main-menu li.sub-menu ul li a:hover {
+    color: white;
+  }
+  #main-menu .menu-wrapper .main-menu-mobile {
+    top: 70px;
+  }
+  #main-menu .menu-wrapper .call .phone-icon {
+    font-size: 22px;
+    color: white;
+    background-color: #e61919;
+    height: 36px;
+    width: 36px;
+    line-height: 36px;
+    text-align: center;
+    border-radius: 100%;
+  }
+  #main-menu .menu-wrapper .call > span > span {
+    color: #243c95;
+  }
+  #main-menu .menu-wrapper .call > span > span.phone {
+    color: #e61919;
+  }
+}
 #main-menu .menu-wrapper {
   transition: padding 0.5s ease;
   padding: 25px 0;
+}
+@media (max-width: 767px) {
+  #main-menu .menu-wrapper {
+    padding: 10px 0;
+  }
 }
 #main-menu .menu-wrapper .toggler {
   cursor: pointer;
@@ -509,7 +620,7 @@ Header Home Styles
   margin-top: 106px;
   position: relative;
 }
-@media (min-width: 768px) and (max-width: 992px), (min-width: 993px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 992px), (min-width: 993px) and (max-width: 1200px), (max-width: 767px) {
   #header-home {
     overflow: hidden;
   }
@@ -518,6 +629,11 @@ Header Home Styles
   position: relative;
   height: 781px;
 }
+@media (max-width: 767px) {
+  #header-home .header-home {
+    height: 830px;
+  }
+}
 #header-home .header-home > h1 {
   position: absolute;
   left: 0;
@@ -525,6 +641,15 @@ Header Home Styles
   color: white;
   font-size: 76px;
   line-height: 76px;
+}
+@media (max-width: 767px) {
+  #header-home .header-home > h1 {
+    font-size: 41px;
+    text-align: center;
+    line-height: normal;
+    width: 100%;
+    top: 100px;
+  }
 }
 @media (min-width: 768px) and (max-width: 992px) {
   #header-home .header-home > h1 {
@@ -549,6 +674,14 @@ Header Home Styles
   top: 54px;
   width: 1553px;
 }
+@media (max-width: 767px) {
+  #header-home .header-home .stripe {
+    right: auto;
+    left: -1290px;
+    top: 25px;
+    font-size: 21px;
+  }
+}
 @media (min-width: 993px) and (max-width: 1200px) {
   #header-home .header-home .stripe {
     right: 605px;
@@ -566,6 +699,15 @@ Header Home Styles
   right: 21px;
   z-index: 10;
 }
+@media (max-width: 767px) {
+  #header-home .header-home .lawyer-img {
+    bottom: auto;
+    margin-right: -205px;
+    right: 50%;
+    top: 250px;
+    z-index: 0;
+  }
+}
 @media (min-width: 993px) and (max-width: 1200px) {
   #header-home .header-home .lawyer-img {
     right: -90px;
@@ -580,6 +722,15 @@ Header Home Styles
   position: absolute;
   top: 450px;
   left: 0;
+}
+@media (max-width: 767px) {
+  #header-home .header-home .btn-3 {
+    bottom: 212px;
+    top: auto;
+    z-index: 10;
+    left: 50%;
+    margin-left: -129px;
+  }
 }
 @media (min-width: 768px) and (max-width: 992px) {
   #header-home .header-home .btn-3 {
@@ -596,6 +747,12 @@ Header Home Styles
   left: -1015px;
   position: absolute;
   top: 110px;
+}
+@media (max-width: 767px) {
+  #header-home .home-quote .divider {
+    left: -240px;
+    top: 95px;
+  }
 }
 @media (min-width: 993px) and (max-width: 1200px) {
   #header-home .home-quote .divider {
@@ -621,6 +778,14 @@ Header Home Styles
   padding: 0 0 0 62px;
   border: none;
 }
+@media (max-width: 767px) {
+  .home-quote blockquote {
+    font-size: 18px;
+    line-height: normal;
+    margin-bottom: 45px;
+    padding-left: 45px;
+  }
+}
 @media (min-width: 768px) and (max-width: 992px) {
   .home-quote blockquote {
     font-size: 23px;
@@ -633,6 +798,11 @@ Header Home Styles
   margin-top: 30px;
   padding-left: 62px;
 }
+@media (max-width: 767px) {
+  .home-quote .cite {
+    padding-left: 0;
+  }
+}
 .home-quote .cite p {
   font-family: 'SabonLTStd-Roman';
   color: white;
@@ -644,6 +814,11 @@ Header Home Styles
   position: absolute;
   top: -48px;
   right: 700px;
+}
+@media (max-width: 767px) {
+  .home-quote .arrow {
+    display: none;
+  }
 }
 @media (min-width: 993px) and (max-width: 1200px) {
   .home-quote .arrow {
@@ -667,6 +842,11 @@ We Help Styles
   margin: 0;
   color: #1e4493;
 }
+@media (max-width: 767px) {
+  #we-help h3 {
+    font-size: 21px;
+  }
+}
 @media (min-width: 993px) and (max-width: 1200px) {
   #we-help h3 {
     font-size: 20px;
@@ -688,6 +868,11 @@ We Help Styles
   top: 25px;
   width: 1000px;
 }
+@media (max-width: 767px) {
+  #we-help h3.stripe {
+    left: -834px;
+  }
+}
 @media (min-width: 993px) and (max-width: 1200px) {
   #we-help h3.stripe {
     left: -840px;
@@ -702,6 +887,11 @@ We Help Styles
   font-size: 17px;
   line-height: 26px;
   margin: 67px 0 0;
+}
+@media (max-width: 767px) {
+  #we-help p {
+    margin-bottom: 20px;
+  }
 }
 @media (min-width: 993px) and (max-width: 1200px) {
   #we-help p {
@@ -726,6 +916,15 @@ We Help Styles
   width: 33.33%;
   margin-bottom: 22px;
 }
+@media (max-width: 767px) {
+  #we-help ul li {
+    font-size: 15px;
+    width: 50%;
+  }
+  #we-help ul li:last-child {
+    margin-bottom: 0 !important;
+  }
+}
 @media (min-width: 768px) and (max-width: 992px) {
   #we-help ul li {
     width: 50%;
@@ -734,7 +933,7 @@ We Help Styles
 #we-help ul li:nth-last-child(-n+3) {
   margin-bottom: 0;
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 992px), (max-width: 767px) {
   #we-help ul li:nth-last-child(-n+3) {
     margin-bottom: 22px;
   }
@@ -747,6 +946,10 @@ We Help Styles
 Practice Areas Styles
 ****************************
 ***************************/
+#practice-areas .owl-controls,
+#locations .owl-controls {
+  margin-top: 20px;
+}
 .practice {
   text-align: center;
   padding: 0 10px;
@@ -882,7 +1085,7 @@ Badges Styles
 #contact-form .my-form .btn-2 {
   margin-top: 23px;
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 992px), (max-width: 767px) {
   #contact-form .my-form .btn-2 {
     width: 100%;
     margin-top: 0;
@@ -891,7 +1094,7 @@ Badges Styles
 #contact-form .my-form img {
   float: right;
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 992px), (max-width: 767px) {
   #contact-form .my-form img {
     float: none;
     margin: 5px auto 0 auto;
@@ -936,15 +1139,20 @@ Locations Styles
 .location > div {
   float: left;
 }
-@media (min-width: 768px) and (max-width: 992px), (min-width: 993px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 992px), (min-width: 993px) and (max-width: 1200px), (max-width: 767px) {
   .location > div {
     float: none;
+  }
+}
+@media (max-width: 767px) {
+  .location > div {
+    text-align: center;
   }
 }
 .location > div > img {
   margin-right: 16px;
 }
-@media (min-width: 768px) and (max-width: 992px), (min-width: 993px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 992px), (min-width: 993px) and (max-width: 1200px), (max-width: 767px) {
   .location > div > img {
     margin: 0 auto;
     display: block;
@@ -959,7 +1167,7 @@ Locations Styles
   margin-bottom: 24px;
   padding-bottom: 16px;
 }
-@media (min-width: 768px) and (max-width: 992px), (min-width: 993px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 992px), (min-width: 993px) and (max-width: 1200px), (max-width: 767px) {
   .location > div h4 {
     margin-top: 22px;
     text-align: center;
@@ -976,6 +1184,13 @@ Locations Styles
   position: relative;
   text-align: left;
 }
+@media (max-width: 767px) {
+  .location > div address,
+  .location > div .phone {
+    text-align: center;
+    padding: 0;
+  }
+}
 .location > div address span,
 .location > div .phone span {
   position: absolute;
@@ -990,6 +1205,12 @@ Locations Styles
   line-height: 25px;
   text-align: center;
   border-radius: 100%;
+}
+@media (max-width: 767px) {
+  .location > div address span,
+  .location > div .phone span {
+    display: none;
+  }
 }
 /***************************
 ****************************
@@ -1008,14 +1229,23 @@ Footer Styles
     padding: 24px 0;
   }
 }
-#footer #middle {
+#footer .middle {
   border-bottom: 1px solid #e4e4e4;
+}
+@media (max-width: 767px) {
+  #footer .bottom {
+    border-bottom: 1px solid #e4e4e4;
+    padding: 10px 0;
+  }
+  #footer .bottom a {
+    float: none;
+  }
 }
 #footer .logo {
   float: left;
   margin-right: 60px;
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 992px), (max-width: 767px) {
   #footer .logo {
     width: 100%;
     margin: 0 0 35px 0;
@@ -1029,13 +1259,18 @@ Footer Styles
 #footer .footer-menus {
   float: left;
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 992px), (max-width: 767px) {
   #footer .footer-menus {
     float: none;
   }
 }
 .footer-menu {
   float: left;
+}
+@media (max-width: 767px) {
+  .footer-menu {
+    width: 25% !important;
+  }
 }
 .footer-menu:nth-child(1) {
   width: 100px;
@@ -1084,8 +1319,20 @@ Footer Styles
   text-transform: uppercase;
   margin-bottom: 10px;
 }
+@media (max-width: 767px) {
+  .footer-menu h5 {
+    text-align: center;
+    margin: 0;
+    line-height: normal;
+  }
+}
 .footer-menu ul {
   margin: 0;
+}
+@media (max-width: 767px) {
+  .footer-menu ul {
+    display: none;
+  }
 }
 .footer-menu ul li {
   font-size: 13px;
@@ -1108,7 +1355,7 @@ Footer Styles
   padding-left: 27px;
   border-left: 1px solid #e4e4e4;
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 992px), (max-width: 767px) {
   .footer-info {
     float: none;
     border: none;
@@ -1120,17 +1367,40 @@ Footer Styles
     margin-top: 9px;
   }
 }
+@media (max-width: 767px) {
+  .footer-info > img {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+}
 .footer-info .call {
   border-bottom: 1px solid #e4e4e4;
   padding-bottom: 19px;
   margin-bottom: 19px;
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 992px), (max-width: 767px) {
   .footer-info .call {
     border-bottom: none;
     float: left;
     margin: 0;
     padding: 0;
+  }
+}
+@media (max-width: 767px) {
+  .footer-info .call {
+    float: none;
+    text-align: center;
+  }
+  .footer-info .call > span {
+    display: inline-block;
+    float: none;
+    text-align: left;
+  }
+  .footer-info .call > span.phone-icon {
+    margin-top: 0;
+    position: relative;
+    top: -9px;
   }
 }
 .footer-info .call .phone-icon {
@@ -1156,6 +1426,11 @@ Footer Styles
   line-height: 40px;
   color: #858a9a;
 }
+@media (max-width: 767px) {
+  .footer-bottom {
+    text-align: center;
+  }
+}
 .footer-bottom a {
   color: #858a9a;
 }
@@ -1171,6 +1446,18 @@ Footer Styles
   display: inline-block;
   margin: 0 20px;
 }
+@media (max-width: 767px) {
+  .footer-bottom p {
+    float: none;
+    width: 100%;
+    text-align: center;
+    line-height: 22px;
+  }
+  .footer-bottom p > span {
+    margin: 0;
+    display: inline;
+  }
+}
 .footer-bottom .powered {
   float: right;
 }
@@ -1185,6 +1472,12 @@ Click Here Styles
   color: white;
   text-transform: uppercase;
   line-height: 119px;
+}
+@media (max-width: 767px) {
+  #click-here {
+    background: url('../images/bg-blue-red-mobile.png') repeat-x 0 0;
+    height: 252px;
+  }
 }
 @media (min-width: 993px) and (max-width: 1200px) {
   #click-here {
@@ -1203,6 +1496,12 @@ Click Here Styles
   padding: 0;
   margin-right: 20px;
 }
+@media (max-width: 767px) {
+  #click-here .btn-2 {
+    margin: 16px auto 0 auto;
+    display: block;
+  }
+}
 @media (min-width: 768px) and (max-width: 992px), (min-width: 993px) and (max-width: 1200px) {
   #click-here .btn-2 {
     margin-left: 10px;
@@ -1212,6 +1511,14 @@ Click Here Styles
   font-size: 24px;
   margin-left: 30px;
   line-height: 119px;
+}
+@media (max-width: 767px) {
+  #click-here h3 {
+    margin-left: 0;
+    line-height: 68px;
+    height: 68px;
+    text-align: center;
+  }
 }
 @media (min-width: 768px) and (max-width: 992px), (min-width: 993px) and (max-width: 1200px) {
   #click-here h3 {
@@ -1226,6 +1533,15 @@ Click Here Styles
   padding: 13px 0;
   margin-top: 27px;
   float: right;
+}
+@media (max-width: 767px) {
+  #click-here h4 {
+    float: none;
+    text-align: center;
+    font-size: 23px;
+    padding: 10px 0;
+    margin-top: 20px;
+  }
 }
 @media (min-width: 993px) and (max-width: 1200px) {
   #click-here h4 {
