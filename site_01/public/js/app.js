@@ -39,14 +39,15 @@ myApp.directive('owlSingleNav', [function () {
   };
 }]);
 
-myApp.directive('changeMenu', ['deviceDetector', '$window', function (deviceDetector, $window) {
+myApp.directive('changeMenu', ['deviceDetector', '$window', '$document', function (deviceDetector, $window, $document) {
   return {
     restrict: 'A',
 
     link: function (scope, element) {
       var windowElement = angular.element($window);
+      var bodyElement = angular.element($document[0].body);
       var $html = $('html');
-      var $use = ((deviceDetector.browser == 'firefox' || deviceDetector.browser == 'ie') ? $html : $body);
+      var $use = ((deviceDetector.browser == 'firefox' || deviceDetector.browser == 'ie') ? $html : bodyElement);
 
       windowElement.on('scroll', function () {
         if ($use) {
@@ -62,4 +63,4 @@ myApp.directive('changeMenu', ['deviceDetector', '$window', function (deviceDete
       });
     }
   };
-}])
+}]);
