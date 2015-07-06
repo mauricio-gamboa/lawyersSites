@@ -1624,6 +1624,11 @@ About Page Styles
   top: 120px;
   width: 100%;
 }
+@media (min-width: 993px) and (max-width: 1200px) {
+  #header-about .header-about .about-meta-data h1 {
+    left: 470px;
+  }
+}
 #header-about .header-about .about-meta-data blockquote {
   margin: 270px 0 0 0;
   padding-bottom: 62px;
