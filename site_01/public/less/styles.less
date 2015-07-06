@@ -37,6 +37,8 @@ Variables
 @gray-10: #858a9a;
 @gray-11: #4b4f5c;
 @gray-12: #606575;
+@gray-13: #f0f1f6;
+@gray-14: #e5e6eb;
 
 @red-1: #e61919;
 @red-2: #ff1a1a;
@@ -239,11 +241,11 @@ body {
 }
 
 .gray-border {
-  .border-bottom(2px, solid, @gray-1);
+  .border-bottom(2px, @gray-1);
 }
 
 .gray-border-1 {
-  .border-bottom(2px, solid, @gray-4);
+  .border-bottom(2px, @gray-4);
 }
 
 .site-padding {
@@ -279,20 +281,24 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.border-bottom(@w, @t, @c) {
-  border-bottom: @w @t @c;
+.border-bottom(@w, @c) {
+  border-bottom: @w solid @c;
 }
 
-.border-top(@w, @t, @c) {
-  border-top: @w @t @c;
+.border(@w, @c) {
+  border: @w solid @c;
 }
 
-.border-left(@w, @t, @c) {
-  border-left: @w @t @c;
+.border-top(@w, @c) {
+  border-top: @w solid @c;
 }
 
-.border-right(@w, @t, @c) {
-  border-right: @w @t @c;
+.border-left(@w, @c) {
+  border-left: @w solid @c;
+}
+
+.border-right(@w, @c) {
+  border-right: @w solid @c;
 }
 
 .round-border(@s) {
@@ -307,6 +313,7 @@ h1, h2, h3, h4, h5, h6 {
   width: @s;
   line-height: @s;
   text-align: center;
+  display: inline-block;
   .round-border(100%);
 }
 
@@ -428,7 +435,7 @@ Main Menu Styles
 
 .white-menu {
   transition: background 0.5s ease;
-  .border-top(3px, solid, @red-1);
+  .border-top(3px, @red-1);
   background: white;
   box-shadow: 0 0 5px -1px #000000;
 
@@ -565,7 +572,7 @@ Main Menu Styles
       float: right;
 
       @media @small {
-        .border-right(1px, solid, white);
+        .border-right(1px, white);
         padding-right: 20px;
       }
     }
@@ -579,7 +586,7 @@ Main Menu Styles
 
     a {
       color: @white-1;
-      .border-bottom(3px, solid, transparent);
+      .border-bottom(3px, transparent);
       display: block;
       font-size: 14px;
       height: 50px;
@@ -630,7 +637,7 @@ Main Menu Styles
 
         li {
           float: none;
-          .border-bottom(1px, solid, @blue-11);
+          .border-bottom(1px, @blue-11);
 
           &:last-child {
             border-bottom: none;
@@ -660,7 +667,7 @@ Main Menu Styles
   background-color: red;
 
   li {
-    .border-bottom(1px, solid, @red-5);
+    .border-bottom(1px, @red-5);
 
     &:last-child {
       border-bottom: none;
@@ -727,7 +734,7 @@ Header Home Styles
 ****************************
 ***************************/
 
-#header-home {
+.header {
   margin-top: 106px;
   position: relative;
 
@@ -735,6 +742,28 @@ Header Home Styles
     overflow: hidden;
   }
 
+  blockquote {
+    background: rgba(0, 0, 0, 0) url("../images/quotes.png") no-repeat scroll 0 0;
+    border: medium none;
+    color: #fff;
+    font-family: SabonLTStd-Italic;
+    font-size: 30px;
+    line-height: 35px;
+    padding: 0 0 0 62px;
+
+    & + .cite {
+      p {
+        font-family: 'SabonLTStd-Roman';
+        color: white;
+        font-size: 18px;
+        line-height: normal;
+        margin: 0;
+      }
+    }
+  }
+}
+
+#header-home {
   .header-home {
     position: relative;
     height: 781px;
@@ -874,14 +903,7 @@ Header Home Styles
   height: 186px;
 
   blockquote {
-    background: url('../images/quotes.png') no-repeat 0 0;
-    font-family: 'SabonLTStd-Italic';
-    color: white;
-    font-size: 30px;
-    line-height: 35px;
     margin: 24px 0 0 0;
-    padding: 0 0 0 62px;
-    border: none;
 
     @media @xs {
       font-size: 18px;
@@ -905,14 +927,6 @@ Header Home Styles
 
     @media @xs {
       padding-left: 0;
-    }
-
-    p {
-      font-family: 'SabonLTStd-Roman';
-      color: white;
-      font-size: 18px;
-      line-height: normal;
-      margin: 0;
     }
   }
 
@@ -1115,6 +1129,10 @@ Client Reviews Styles
   .owl-controls {
     margin-top: 34px;
   }
+
+  & + .badges {
+    padding-top: 20px;
+  }
 }
 
 .review-slide {
@@ -1179,8 +1197,6 @@ Badges Styles
 ***************************/
 
 .badges {
-  padding-top: 20px;
-
   .my-badge {
     width: 33.33%;
     display: block;
@@ -1237,6 +1253,26 @@ Badges Styles
         margin: 5px auto 0 auto;
         display: block;
       }
+    }
+  }
+
+  & + .disclosure {
+    margin-top: 30px;
+  }
+}
+
+.disclosure {
+  text-align: center;
+
+  p {
+    font-size: 14px;
+    line-height: 23px;
+    margin: 0;
+
+    span {
+      color: @red-1;
+      font-weight: bold;
+      text-transform: uppercase;
     }
   }
 }
@@ -1308,7 +1344,7 @@ Locations Styles
       color: @blue-4;
       font-size: 21px;
       text-transform: uppercase;
-      .border-bottom(2px, solid, @gray-7);
+      .border-bottom(2px, @gray-7);
       margin-top: 12px;
       margin-bottom: 24px;
       padding-bottom: 16px;
@@ -1363,7 +1399,7 @@ Footer Styles
 
   #top {
     padding: 35px 0;
-    .border-bottom(1px, solid, @gray-4);
+    .border-bottom(1px, @gray-4);
 
     @media @small {
       padding: 24px 0;
@@ -1371,12 +1407,12 @@ Footer Styles
   }
 
   .middle {
-    .border-bottom(1px, solid, @gray-4);
+    .border-bottom(1px, @gray-4);
   }
 
   .bottom {
     @media @xs {
-      .border-bottom(1px, solid, @gray-4);
+      .border-bottom(1px, @gray-4);
       padding: 10px 0;
 
       a {
@@ -1514,7 +1550,7 @@ Footer Styles
 .footer-info {
   float: right;
   padding-left: 27px;
-  .border-left(1px, solid, @gray-4);
+  .border-left(1px, @gray-4);
 
   @media @small, @xs {
     float: none;
@@ -1537,7 +1573,7 @@ Footer Styles
   }
 
   .call {
-    .border-bottom(1px, solid, @gray-4);
+    .border-bottom(1px, @gray-4);
     padding-bottom: 19px;
     margin-bottom: 19px;
 
@@ -1690,8 +1726,8 @@ Click Here Styles
   }
 
   h4 {
-    .border-bottom(2px, solid, @blue-7);
-    .border-top(2px, solid, @blue-7);
+    .border-bottom(2px, @blue-7);
+    .border-top(2px, @blue-7);
     font-size: 24px;
     padding: 13px 0;
     margin-top: 27px;
@@ -1714,6 +1750,159 @@ Click Here Styles
       font-size: 23px;
       line-height: 22px;
       padding: 5px 0;
+    }
+  }
+}
+
+/***************************
+****************************
+About Page Styles
+****************************
+***************************/
+
+#header-about {
+  background: url("../images/bg-about.png") no-repeat 50% 100%;
+  overflow: hidden;
+
+  .header-about {
+    position: relative;
+    height: 560px;
+
+    .lawyer-img {
+      position: absolute;
+      bottom: 0;
+      left: 90px;
+    }
+
+    .sep-star {
+      position: absolute;
+      bottom: 158px;
+      left: 570px;
+    }
+
+    .about-meta-data {
+      width: 50%;
+      float: right;
+
+      h1 {
+        background: url("../images/bg-about-title.png") repeat-x 0 0;
+        color: white;
+        font-size: 50px;
+        height: 81px;
+        left: 570px;
+        line-height: 81px;
+        padding-left: 23px;
+        position: absolute;
+        top: 120px;
+        width: 100%;
+      }
+
+      blockquote {
+        margin: 270px 0 0 0;
+        padding-bottom: 62px;
+
+        & + .cite {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}
+
+#content {
+  #as-seen-on {
+    .border-top(2px, @gray-1);
+    margin-top: 35px;
+  }
+}
+
+.content {
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 30px;
+
+    &.lead {
+      color: @blue-6;
+      font-size: 23px;
+      line-height: 33px;
+    }
+  }
+
+  .badges {
+    .border-top(2px, @gray-13);
+    .border-bottom(2px, @gray-13);
+    padding: 25px 0;
+    margin-bottom: 30px
+  }
+}
+
+.sidebar {
+  background-color: @gray-13;
+  padding: 30px 0;
+
+  .widget {
+    padding: 0 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    .border-bottom(1px, @gray-14);
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    &.location {
+      > div {
+        float: none;
+
+        img {
+          float: left;
+          width: 59px;
+          margin-right: 18px;
+
+          & + h4 {
+            margin: 0;
+            padding: 0;
+            line-height: 59px;
+            font-size: 16px;
+            border-bottom: none;
+          }
+        }
+
+        &:first-child {
+          .border-bottom(2px, @gray-14);
+          padding-bottom: 15px;
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+
+  & + .testimonials {
+    margin-top: 30px;
+  }
+}
+
+.testimonials {
+  h4 {
+    font-size: 19px;
+    line-height: 31px;
+    color: @blue-6;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    span {
+      .icon(31px, @red-1, white, 16px);
+    }
+  }
+}
+
+.testimonials-slider {
+  .testimonial {
+    p {
+      .font-1;
     }
   }
 }
