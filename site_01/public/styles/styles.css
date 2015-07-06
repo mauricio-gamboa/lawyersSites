@@ -646,6 +646,11 @@ Header Home Styles
     overflow: hidden;
   }
 }
+@media (max-width: 767px) {
+  .header {
+    margin-top: 73px;
+  }
+}
 .header blockquote {
   background: rgba(0, 0, 0, 0) url("../images/quotes.png") no-repeat scroll 0 0;
   border: medium none;
@@ -713,8 +718,7 @@ Header Home Styles
 }
 @media (max-width: 767px) {
   #header-home .header-home .stripe {
-    right: auto;
-    left: -1290px;
+    right: 0;
     top: 25px;
     font-size: 21px;
   }
@@ -739,7 +743,7 @@ Header Home Styles
 @media (max-width: 767px) {
   #header-home .header-home .lawyer-img {
     bottom: auto;
-    margin-right: -205px;
+    margin-right: -180px;
     right: 50%;
     top: 250px;
     z-index: 0;
@@ -1610,6 +1614,11 @@ About Page Styles
   position: relative;
   height: 560px;
 }
+@media (max-width: 767px) {
+  #header-about .header-about {
+    height: 657px;
+  }
+}
 #header-about .header-about .lawyer-img {
   position: absolute;
   bottom: 0;
@@ -1623,6 +1632,13 @@ About Page Styles
 @media (min-width: 768px) and (max-width: 992px) {
   #header-about .header-about .lawyer-img {
     left: -135px;
+  }
+}
+@media (max-width: 767px) {
+  #header-about .header-about .lawyer-img {
+    width: 344px;
+    left: 50%;
+    margin-left: -172px;
   }
 }
 #header-about .header-about .sep-star {
@@ -1640,15 +1656,27 @@ About Page Styles
     left: 360px;
   }
 }
+@media (max-width: 767px) {
+  #header-about .header-about .sep-star {
+    left: 0;
+    bottom: auto;
+    top: 208px;
+  }
+}
 #header-about .header-about .about-meta-data {
   width: 50%;
   float: right;
+}
+@media (max-width: 767px) {
+  #header-about .header-about .about-meta-data {
+    float: none;
+    width: 100%;
+  }
 }
 #header-about .header-about .about-meta-data h1 {
   background: url("../images/bg-about-title.png") repeat-x 0 0;
   color: white;
   font-size: 50px;
-  height: 81px;
   left: 570px;
   line-height: 81px;
   padding-left: 23px;
@@ -1666,6 +1694,15 @@ About Page Styles
     left: 360px;
   }
 }
+@media (max-width: 767px) {
+  #header-about .header-about .about-meta-data h1 {
+    width: 150%;
+    line-height: 58px;
+    left: 0;
+    top: 25px;
+    font-size: 37px;
+  }
+}
 #header-about .header-about .about-meta-data blockquote {
   margin: 270px 0 0 0;
   padding-bottom: 62px;
@@ -1675,12 +1712,31 @@ About Page Styles
     margin: 250px 0 0 0;
   }
 }
+@media (max-width: 767px) {
+  #header-about .header-about .about-meta-data blockquote {
+    font-size: 21px;
+    line-height: 29px;
+    margin: 105px 0 0 0;
+    padding-bottom: 0;
+  }
+}
 #header-about .header-about .about-meta-data blockquote + .cite {
   margin-top: 30px;
 }
 @media (min-width: 768px) and (max-width: 992px) {
   #header-about .header-about .about-meta-data blockquote + .cite {
     margin-top: 0;
+  }
+}
+@media (max-width: 767px) {
+  #header-about .header-about .about-meta-data blockquote + .cite {
+    background: url("../images/bg-quote.png") no-repeat 0 0;
+    width: 150%;
+    margin-top: 10px;
+    padding-top: 25px;
+  }
+  #header-about .header-about .about-meta-data blockquote + .cite p {
+    font-size: 15px;
   }
 }
 #content #as-seen-on {

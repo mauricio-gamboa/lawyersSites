@@ -182,7 +182,7 @@ Fonts
 }
 
 @font-face {
-  font-family:'Lato-Regular';
+  font-family: 'Lato-Regular';
   src: url('../fonts/Lato-Regular_gdi.eot');
   src: url('../fonts/Lato-Regular_gdi.eot?#iefix') format('embedded-opentype'),
   url('../fonts/Lato-Regular_gdi.woff') format('woff'),
@@ -196,7 +196,7 @@ Fonts
 }
 
 @font-face {
-  font-family:'Lato-Bold';
+  font-family: 'Lato-Bold';
   src: url('../fonts/Lato-Bold_gdi.eot');
   src: url('../fonts/Lato-Bold_gdi.eot?#iefix') format('embedded-opentype'),
   url('../fonts/Lato-Bold_gdi.woff') format('woff'),
@@ -768,6 +768,10 @@ Header Home Styles
     overflow: hidden;
   }
 
+  @media @xs {
+    margin-top: 73px;
+  }
+
   blockquote {
     background: rgba(0, 0, 0, 0) url("../images/quotes.png") no-repeat scroll 0 0;
     border: medium none;
@@ -839,8 +843,7 @@ Header Home Styles
       width: 1553px;
 
       @media @xs {
-        right: auto;
-        left: -1290px;
+        right: 0;
         top: 25px;
         font-size: 21px;
       }
@@ -863,7 +866,7 @@ Header Home Styles
 
       @media @xs {
         bottom: auto;
-        margin-right: -205px;
+        margin-right: -180px;
         right: 50%;
         top: 250px;
         z-index: 0;
@@ -1794,17 +1797,27 @@ About Page Styles
     position: relative;
     height: 560px;
 
+    @media @xs {
+      height: 657px;
+    }
+
     .lawyer-img {
       position: absolute;
       bottom: 0;
       left: 90px;
-      
+
       @media @medium {
         left: 0;
       }
 
       @media @small {
         left: -135px;
+      }
+
+      @media @xs {
+        width: 344px;
+        left: 50%;
+        margin-left: -172px;
       }
     }
 
@@ -1820,17 +1833,27 @@ About Page Styles
       @media @small {
         left: 360px;
       }
+
+      @media @xs {
+        left: 0;
+        bottom: auto;
+        top: 208px;
+      }
     }
 
     .about-meta-data {
       width: 50%;
       float: right;
 
+      @media @xs {
+        float: none;
+        width: 100%;
+      }
+
       h1 {
         background: url("../images/bg-about-title.png") repeat-x 0 0;
         color: white;
         font-size: 50px;
-        height: 81px;
         left: 570px;
         line-height: 81px;
         padding-left: 23px;
@@ -1845,6 +1868,14 @@ About Page Styles
         @media @small {
           left: 360px;
         }
+
+        @media @xs {
+          width: 150%;
+          line-height: 58px;
+          left: 0;
+          top: 25px;
+          font-size: 37px;
+        }
       }
 
       blockquote {
@@ -1855,11 +1886,29 @@ About Page Styles
           margin: 250px 0 0 0;
         }
 
+        @media @xs {
+          font-size: 21px;
+          line-height: 29px;
+          margin: 105px 0 0 0;
+          padding-bottom: 0;
+        }
+
         & + .cite {
           margin-top: 30px;
 
           @media @small {
             margin-top: 0;
+          }
+
+          @media @xs {
+            background: url("../images/bg-quote.png") no-repeat 0 0;
+            width: 150%;
+            margin-top: 10px;
+            padding-top: 25px;
+
+            p {
+              font-size: 15px;
+            }
           }
         }
       }
@@ -1875,7 +1924,7 @@ About Page Styles
 }
 
 .content {
-  font-family:'Lato-Regular';
+  font-family: 'Lato-Regular';
 
   p {
     font-size: 16px;
@@ -1883,7 +1932,7 @@ About Page Styles
     margin-bottom: 30px;
 
     &.lead {
-      font-family:'Lato-Bold';
+      font-family: 'Lato-Bold';
       color: @blue-6;
       font-size: 23px;
       line-height: 33px;
