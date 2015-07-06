@@ -1598,6 +1598,11 @@ About Page Styles
   bottom: 0;
   left: 90px;
 }
+@media (min-width: 993px) and (max-width: 1200px) {
+  #header-about .header-about .lawyer-img {
+    left: 0;
+  }
+}
 #header-about .header-about .sep-star {
   position: absolute;
   bottom: 158px;
