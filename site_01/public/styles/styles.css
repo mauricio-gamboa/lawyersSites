@@ -284,7 +284,7 @@ Buttons Styles
   text-transform: uppercase;
 }
 .my-link.link-1:hover {
-  color: #ff1a1a;
+  color: #b71616;
 }
 /***************************
 ****************************
@@ -1822,26 +1822,20 @@ About Page Styles
   color: #e61919;
 }
 .sidebar .widget a:hover {
-  color: #ff1a1a;
+  color: #b71616;
 }
 .sidebar .widget h4 {
   font-size: 15px;
   color: #243c95;
-  line-height: 31px;
+  line-height: 30px;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
 .sidebar .widget h4 span {
-  font-size: 16px;
-  color: white;
-  background-color: #e61919;
-  height: 31px;
-  width: 31px;
-  line-height: 31px;
-  text-align: center;
-  display: inline-block;
-  border-radius: 100%;
+  color: #e61919;
+  font-size: 24px;
   margin-right: 10px;
+  vertical-align: middle;
 }
 .sidebar .widget p {
   font-size: 16px;
@@ -1896,8 +1890,68 @@ About Page Styles
 .sidebar .widget.map .map-wrapper img {
   width: 100%;
 }
+.sidebar .widget.most-viewed .article {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.sidebar .widget.most-viewed .article:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.sidebar .widget.most-viewed .article > h3 {
+  font-size: 16px;
+  line-height: 26px;
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+.sidebar .widget.most-viewed .article > img {
+  width: 69px;
+  margin-right: 10px;
+}
+.sidebar .widget.most-viewed .article > div p {
+  font-size: 14px;
+  line-height: 20px;
+}
+.sidebar .widget.most-viewed .article > div > div {
+  margin-top: 20px;
+}
+.sidebar .widget.most-viewed .article > div > div .link-1 {
+  font-size: 14px;
+}
+.sidebar .widget.archive ul {
+  margin: 0 -30px;
+}
+.sidebar .widget.archive ul li {
+  margin: 0;
+}
+.sidebar .widget.archive ul li a {
+  font-family: 'proxima_nova_bold';
+  color: #2e2e2e;
+  font-size: 14px;
+  line-height: 48px;
+  display: block;
+  padding: 0 30px;
+  position: relative;
+}
+.sidebar .widget.archive ul li a i {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  margin-top: -7px;
+}
+.sidebar .widget.archive ul li a:hover {
+  color: white;
+  background: url("../images/bg-archive.png") repeat-x 0 0;
+}
+.sidebar .widget.tags img {
+  width: 100%;
+}
 .sidebar + .testimonials {
   margin-top: 30px;
+}
+.sidebar.blog .widget h4 {
+  border-bottom: 1px solid #dfdfdf;
+  padding-bottom: 10px;
 }
 .testimonials h4 {
   font-size: 19px;
@@ -1907,15 +1961,8 @@ About Page Styles
   margin-bottom: 20px;
 }
 .testimonials h4 span {
-  font-size: 16px;
-  color: white;
-  background-color: #e61919;
-  height: 31px;
-  width: 31px;
-  line-height: 31px;
-  text-align: center;
-  display: inline-block;
-  border-radius: 100%;
+  color: #e61919;
+  margin-right: 10px;
 }
 .testimonials-slider .testimonial p {
   font-size: 16px;
@@ -2040,4 +2087,89 @@ Location Styles
   border-top: 2px solid #ededed;
   text-align: center;
   padding: 13px 0;
+}
+/***************************
+****************************
+Blog Styles
+****************************
+***************************/
+.article {
+  border-bottom: 1px solid #ebebeb;
+  margin-bottom: 45px;
+  padding-bottom: 45px;
+}
+.article:last-child {
+  border-bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.article > img {
+  float: left;
+  margin-right: 30px;
+}
+.article > div h3 {
+  color: #303030;
+  font-size: 21px;
+  margin-bottom: 15px;
+}
+.article > div p {
+  font-size: 16px;
+  line-height: 26px;
+  margin: 0;
+}
+.article > div > div {
+  margin-top: 33px;
+}
+.article > div > div a {
+  float: left;
+}
+.article > div > div a + a {
+  color: #898989;
+  float: right;
+}
+.article > div > div a + a:hover {
+  color: #606575;
+}
+.my-pagination {
+  border-top: 1px solid #ebebeb;
+  text-align: center;
+  margin-top: 35px;
+  padding-top: 35px;
+}
+.my-pagination .pagination {
+  margin: 0;
+}
+.my-pagination .pagination li a {
+  font-family: 'Lato-Regular';
+  border-radius: 4px;
+  color: #e61919;
+  border: 1px solid #c8c8c8;
+  line-height: 32px;
+  padding: 0 15px;
+  display: block;
+  margin: 0 5px;
+  font-size: 17px;
+}
+.my-pagination .pagination li a:hover {
+  color: white;
+  background: url("../images/bg-pagination.png") repeat-x 0 0;
+}
+.my-pagination .pagination li.active a {
+  color: white;
+  background: url("../images/bg-pagination.png") repeat-x 0 0;
+}
+.my-pagination .pagination li.active a:hover {
+  border: 1px solid #c8c8c8;
+}
+.my-pagination .pagination li.active a i {
+  vertical-align: middle;
+}
+.my-pagination .pagination li.ell a {
+  margin: 0;
+  padding: 0 5px;
+  border: 1px solid transparent;
+}
+.my-pagination .pagination li.ell a:hover {
+  background: none;
+  color: #e61919;
 }

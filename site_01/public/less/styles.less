@@ -39,9 +39,14 @@ Variables
 @gray-12: #606575;
 @gray-13: #f0f1f6;
 @gray-14: #e5e6eb;
+@gray-15: #ebebeb;
+@gray-16: #898989;
+@gray-17: #dfdfdf;
+@gray-18: #2e2e2e;
+@gray-19: #c8c8c8;
 
 @red-1: #e61919;
-@red-2: #ff1a1a;
+@red-2: #b71616;
 @red-3: #ed1c24;
 @red-4: #b71319;
 @red-5: #f14950;
@@ -2016,13 +2021,15 @@ About Page Styles
     h4 {
       font-size: 15px;
       color: #243c95;
-      line-height: 31px;
+      line-height: 30px;
       margin-bottom: 20px;
       text-transform: uppercase;
 
       span {
-        .icon(31px, @red-1, white, 16px);
+        color: @red-1;
+        font-size: 24px;
         margin-right: 10px;
+        vertical-align: middle;
       }
     }
 
@@ -2096,10 +2103,95 @@ About Page Styles
         }
       }
     }
+
+    &.most-viewed {
+      .article {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+
+        &:last-child {
+          margin-bottom: 0;
+          padding-bottom: 0;
+        }
+
+        > h3 {
+          .font-1;
+          line-height: 22px;
+          margin-bottom: 20px;
+        }
+
+        > img {
+          width: 69px;
+          margin-right: 10px;
+        }
+
+        > div {
+          p {
+            font-size: 14px;
+            line-height: 20px;
+          }
+
+          > div {
+            margin-top: 20px;
+
+            .link-1 {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+
+    &.archive {
+      ul {
+        margin: 0 -30px;
+
+        li {
+          margin: 0;
+
+          a {
+            font-family: 'proxima_nova_bold';
+            color: @gray-18;
+            font-size: 14px;
+            line-height: 48px;
+            display: block;
+            padding: 0 30px;
+            position: relative;
+
+            i {
+              position: absolute;
+              right: 30px;
+              top: 50%;
+              margin-top: -7px;
+            }
+
+            &:hover {
+              color: white;
+              background: url("../images/bg-archive.png") repeat-x 0 0;
+            }
+          }
+        }
+      }
+    }
+
+    &.tags {
+      img {
+        width: 100%;
+      }
+    }
   }
 
   & + .testimonials {
     margin-top: 30px;
+  }
+
+  &.blog {
+    .widget {
+      h4 {
+        .border-bottom(1px, @gray-17);
+        padding-bottom: 10px;
+      }
+    }
   }
 }
 
@@ -2112,7 +2204,8 @@ About Page Styles
     margin-bottom: 20px;
 
     span {
-      .icon(31px, @red-1, white, 16px);
+      color: @red-1;
+      margin-right: 10px;
     }
   }
 }
@@ -2163,7 +2256,7 @@ Location Styles
           margin: 0 auto;
         }
       }
-      
+
       @media @medium, @small {
         float: left;
       }
@@ -2246,5 +2339,116 @@ Location Styles
     .border-top(2px, @gray-7);
     text-align: center;
     padding: 13px 0;
+  }
+}
+
+/***************************
+****************************
+Blog Styles
+****************************
+***************************/
+
+.article {
+  .border-bottom(1px, @gray-15);
+  margin-bottom: 45px;
+  padding-bottom: 45px;
+
+  &:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  > img {
+    float: left;
+    margin-right: 30px;
+  }
+
+  > div {
+    h3 {
+      color: @gray-8;
+      font-size: 21px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      .font-1;
+      margin: 0;
+    }
+
+    > div {
+      margin-top: 33px;
+
+      a {
+        float: left;
+
+        & + a {
+          color: @gray-16;
+          float: right;
+
+          &:hover {
+            color: @gray-12;
+          }
+        }
+      }
+    }
+  }
+}
+
+.my-pagination {
+  .border-top(1px, @gray-15);
+  text-align: center;
+  margin-top: 35px;
+  padding-top: 35px;
+
+  .pagination {
+    margin: 0;
+
+    li {
+      a {
+        font-family: 'Lato-Regular';
+        border-radius: 4px;
+        color: @red-1;
+        .border(1px, @gray-19);
+        line-height: 32px;
+        padding: 0 15px;
+        display: block;
+        margin: 0 5px;
+        font-size: 17px;
+
+        &:hover {
+          color: white;
+          background: url("../images/bg-pagination.png") repeat-x 0 0;
+        }
+      }
+
+      &.active {
+        a {
+          color: white;
+          background: url("../images/bg-pagination.png") repeat-x 0 0;
+
+          &:hover {
+            .border(1px, @gray-19);
+          }
+
+          i {
+            vertical-align: middle;
+          }
+        }
+      }
+
+      &.ell {
+        a {
+          margin: 0;
+          padding: 0 5px;
+          .border(1px, transparent);
+
+          &:hover {
+            background: none;
+            color: @red-1;
+          }
+        }
+      }
+    }
   }
 }
