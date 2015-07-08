@@ -1170,6 +1170,7 @@ Badges Styles
 .my-form .form-group label {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
+  font-weight: normal;
 }
 .my-form .form-group label span {
   font-weight: normal;
@@ -1815,6 +1816,20 @@ About Page Styles
 .content ul li {
   margin-bottom: 0;
 }
+.content h2 {
+  color: #303030;
+  font-family: 'proxima_nova_regular';
+  font-size: 28px;
+}
+.content .date {
+  margin-bottom: 20px;
+}
+.content .featured-img {
+  margin-bottom: 20px;
+}
+.content .featured-img img {
+  width: 100%;
+}
 .sidebar {
   background-color: #f0f1f6;
   padding: 30px 0;
@@ -2221,4 +2236,92 @@ Blog Styles
 .my-pagination .pagination li.ell a:hover {
   background: none;
   color: #e61919;
+}
+/***************************
+****************************
+Blog Detail Styles
+****************************
+***************************/
+.detail-section {
+  margin-top: 40px;
+}
+.detail-section > h4 {
+  font-size: 19px;
+  color: #243c95;
+  text-transform: uppercase;
+  line-height: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #dfdfdf;
+  margin-bottom: 30px;
+}
+.detail-section > h4 span {
+  color: #e61919;
+  font-size: 24px;
+  margin-right: 13px;
+}
+.related-posts .article {
+  float: left;
+  width: 50%;
+  border-bottom: none;
+  margin: 0;
+  padding: 0;
+}
+.related-posts .article:first-child {
+  padding-right: 30px;
+}
+.related-posts .article h3 {
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 12px;
+}
+.related-posts .article img {
+  width: 69px;
+  margin-right: 12px;
+}
+.related-posts .article p {
+  font-size: 14px;
+  line-height: 20px;
+}
+.comments .comment {
+  padding: 22px 0;
+  border-bottom: 1px solid #dfdfdf;
+}
+.comments .comment:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.comments .comment h5 {
+  color: #303030;
+  font-size: 16px;
+  margin-bottom: 5px;
+  line-height: 35px;
+}
+.comments .comment h5 span {
+  font-family: 'proxima_nova_semibold';
+  text-transform: uppercase;
+  float: right;
+  font-size: 12px;
+  color: #959595;
+}
+.comments .comment p {
+  font-size: 16px;
+  line-height: 26px;
+}
+.comments .comment .my-link {
+  font-size: 13px;
+}
+.comments .comment .reply {
+  border-top: 1px solid #dfdfdf;
+  margin-top: 22px;
+  border-bottom: 0;
+  padding-bottom: 0;
+  padding-left: 98px;
+}
+.comments-form {
+  background-color: #eceef4;
+  padding: 24px 36px;
+}
+.comments-form .my-form .btn-2 {
+  padding: 0 38px;
+  margin-top: 10px;
 }

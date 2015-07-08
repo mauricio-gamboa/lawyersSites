@@ -44,6 +44,7 @@ Variables
 @gray-17: #dfdfdf;
 @gray-18: #2e2e2e;
 @gray-19: #c8c8c8;
+@gray-20: #959595;
 
 @red-1: #e61919;
 @red-2: #b71616;
@@ -1341,6 +1342,7 @@ Badges Styles
     label {
       font-family: @helvetica;
       font-size: 14px;
+      font-weight: normal;
 
       span {
         font-weight: normal;
@@ -2007,6 +2009,24 @@ About Page Styles
       margin-bottom: 0;
     }
   }
+
+  h2 {
+    color: @gray-8;
+    font-family: 'proxima_nova_regular';
+    font-size: 28px;
+  }
+
+  .date {
+    margin-bottom: 20px;
+  }
+
+  .featured-img {
+    margin-bottom: 20px;
+
+    img {
+      width: 100%;
+    }
+  }
 }
 
 .sidebar {
@@ -2493,6 +2513,116 @@ Blog Styles
           }
         }
       }
+    }
+  }
+}
+
+/***************************
+****************************
+Blog Detail Styles
+****************************
+***************************/
+
+.detail-section {
+  margin-top: 40px;
+
+  > h4 {
+    font-size: 19px;
+    color: @blue-6;
+    text-transform: uppercase;
+    line-height: 24px;
+    padding-bottom: 20px;
+    .border-bottom(1px, @gray-17);
+    margin-bottom: 30px;
+
+    span {
+      color: @red-1;
+      font-size: 24px;
+      margin-right: 13px;
+    }
+  }
+}
+
+.related-posts {
+  .article {
+    float: left;
+    width: 50%;
+    border-bottom: none;
+    margin: 0;
+    padding: 0;
+
+    &:first-child {
+      padding-right: 30px;
+    }
+
+    h3 {
+      .font-1;
+      margin-bottom: 12px;
+    }
+
+    img {
+      width: 69px;
+      margin-right: 12px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
+.comments {
+  .comment {
+    padding: 22px 0;
+    .border-bottom(1px, @gray-17);
+
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    h5 {
+      color: @gray-8;
+      font-size: 16px;
+      margin-bottom: 5px;
+      line-height: 35px;
+
+      span {
+        font-family: 'proxima_nova_semibold';
+        text-transform: uppercase;
+        float: right;
+        font-size: 12px;
+        color: @gray-20;
+      }
+    }
+
+    p {
+      .font-1;
+    }
+
+    .my-link {
+      font-size: 13px;
+    }
+
+    .reply {
+      .border-top(1px, @gray-17);
+      margin-top: 22px;
+      border-bottom: 0;
+      padding-bottom: 0;
+      padding-left: 98px;
+    }
+  }
+}
+
+.comments-form {
+  background-color: @gray-2;
+  padding: 24px 36px;
+
+  .my-form {
+    .btn-2 {
+      padding: 0 38px;
+      margin-top: 10px;
     }
   }
 }
