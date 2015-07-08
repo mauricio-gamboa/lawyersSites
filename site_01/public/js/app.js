@@ -64,3 +64,13 @@ myApp.directive('changeMenu', ['deviceDetector', '$window', '$document', functio
     }
   };
 }]);
+
+myApp.directive('textSmall', [function () {
+  return {
+    restrict: 'A',
+
+    link: function (scope, element) {
+      element.text(element.text().substring(0, 63) + '...');
+    }
+  };
+}]);
