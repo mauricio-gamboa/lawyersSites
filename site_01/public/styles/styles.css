@@ -695,19 +695,24 @@ Header Home Styles
   font-size: 76px;
   line-height: 76px;
 }
-@media (max-width: 767px) {
+@media (min-width: 993px) and (max-width: 1200px) {
   #header-home .header-home > h1 {
-    font-size: 41px;
-    text-align: center;
-    line-height: normal;
-    width: 100%;
-    top: 100px;
+    font-size: 68px;
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
   #header-home .header-home > h1 {
-    font-size: 62px;
+    font-size: 55px;
     line-height: 62px;
+  }
+}
+@media (max-width: 767px) {
+  #header-home .header-home > h1 {
+    font-size: 35px;
+    text-align: center;
+    line-height: normal;
+    width: 100%;
+    top: 100px;
   }
 }
 #header-home .header-home > h1 span {
@@ -875,7 +880,7 @@ We Help Styles
 ***************************/
 #we-help h3 {
   text-transform: uppercase;
-  font-size: 25px;
+  font-size: 24px;
   line-height: 22px;
   margin: 0;
   color: #1e4493;
@@ -892,13 +897,13 @@ We Help Styles
 }
 @media (min-width: 768px) and (max-width: 992px) {
   #we-help h3 {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 #we-help h3.stripe {
   background-color: #e61919;
   color: white;
-  left: -808px;
+  left: -814px;
   line-height: 33px;
   padding-right: 11px;
   position: absolute;
@@ -918,7 +923,7 @@ We Help Styles
 }
 @media (min-width: 768px) and (max-width: 992px) {
   #we-help h3.stripe {
-    left: -814px;
+    left: -827px;
   }
 }
 #we-help p {
@@ -1024,8 +1029,16 @@ As Seen On Styles
 .aso-wrapper .aso {
   text-align: center;
   line-height: 81px;
+  float: left;
+  width: 16.66%;
+}
+@media (max-width: 767px) {
+  .aso-wrapper .aso {
+    width: 50%;
+  }
 }
 .aso-wrapper .aso img {
+  max-width: 100%;
   vertical-align: middle;
 }
 /***************************
@@ -2288,6 +2301,7 @@ Blog Detail Styles
 .related-posts .article img {
   width: 69px;
   margin-right: 12px;
+  margin-bottom: 10px;
 }
 @media (max-width: 767px) {
   .related-posts .article img {
@@ -2354,4 +2368,10 @@ Blog Detail Styles
 .comments-form .my-form .btn-2 {
   padding: 0 38px;
   margin-top: 10px;
+}
+@media (max-width: 767px) {
+  .comments-form .my-form .btn-2 {
+    width: 100%;
+    text-align: center;
+  }
 }
