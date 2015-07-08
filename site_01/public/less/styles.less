@@ -73,6 +73,16 @@ Responsive
   display: none;
 }
 
+@media @large {
+  .hide-xl {
+    display: none !important;
+  }
+
+  .show-xl {
+    display: block;
+  }
+}
+
 @media @medium {
   .hide-m {
     display: none !important;
@@ -2123,6 +2133,7 @@ About Page Styles
         > img {
           width: 69px;
           margin-right: 10px;
+          margin-bottom: 15px;
         }
 
         > div {
@@ -2362,6 +2373,22 @@ Blog Styles
   > img {
     float: left;
     margin-right: 30px;
+
+    @media @medium {
+      margin-bottom: 60px;
+    }
+
+    @media @small {
+      width: 104px;
+      margin-right: 20px;
+      margin-bottom: 135px;
+    }
+
+    @media @xs {
+      margin: 0 auto 20px auto;
+      float: none;
+      display: block;
+    }
   }
 
   > div {
@@ -2369,11 +2396,20 @@ Blog Styles
       color: @gray-8;
       font-size: 21px;
       margin-bottom: 15px;
+
+      @media @small, @xs {
+        font-size: 20px;
+      }
     }
 
     p {
       .font-1;
       margin: 0;
+
+      @media @small, @xs {
+        font-size: 15px;
+        line-height: 23px;
+      }
     }
 
     > div {
@@ -2415,6 +2451,14 @@ Blog Styles
         display: block;
         margin: 0 5px;
         font-size: 17px;
+
+        @media @small {
+          padding: 0 12px;
+        }
+
+        @media @xs {
+          padding: 0 5px;
+        }
 
         &:hover {
           color: white;
