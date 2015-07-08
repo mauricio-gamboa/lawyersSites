@@ -7,7 +7,7 @@ myApp.directive('scrollTop', ['$document', function ($document) {
     restrict: 'A',
 
     link: function () {
-      //$($document).scrollTop(0);
+      $($document).scrollTop(0);
     }
   };
 }]);

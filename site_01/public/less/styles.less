@@ -2553,6 +2553,15 @@ Blog Detail Styles
 
     &:first-child {
       padding-right: 30px;
+
+      @media @xs {
+        padding-right: 0;
+      }
+    }
+
+    @media @xs {
+      float: none;
+      width: 100%;
     }
 
     h3 {
@@ -2563,12 +2572,20 @@ Blog Detail Styles
     img {
       width: 69px;
       margin-right: 12px;
+      
+      @media @xs {
+        float: left;
+      }
     }
 
     p {
       font-size: 14px;
       line-height: 20px;
     }
+  }
+
+  .owl-controls {
+    margin-top: 30px;
   }
 }
 
@@ -2611,6 +2628,10 @@ Blog Detail Styles
       border-bottom: 0;
       padding-bottom: 0;
       padding-left: 98px;
+
+      @media @xs {
+        padding-left: 0;
+      }
     }
   }
 }
@@ -2618,6 +2639,11 @@ Blog Detail Styles
 .comments-form {
   background-color: @gray-2;
   padding: 24px 36px;
+
+  @media @xs {
+    padding: 24px 15px;
+    margin: 20px -15px 0 -15px;
+  }
 
   .my-form {
     .btn-2 {

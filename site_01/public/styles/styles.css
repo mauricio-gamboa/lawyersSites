@@ -2269,6 +2269,17 @@ Blog Detail Styles
 .related-posts .article:first-child {
   padding-right: 30px;
 }
+@media (max-width: 767px) {
+  .related-posts .article:first-child {
+    padding-right: 0;
+  }
+}
+@media (max-width: 767px) {
+  .related-posts .article {
+    float: none;
+    width: 100%;
+  }
+}
 .related-posts .article h3 {
   font-size: 16px;
   line-height: 26px;
@@ -2278,9 +2289,17 @@ Blog Detail Styles
   width: 69px;
   margin-right: 12px;
 }
+@media (max-width: 767px) {
+  .related-posts .article img {
+    float: left;
+  }
+}
 .related-posts .article p {
   font-size: 14px;
   line-height: 20px;
+}
+.related-posts .owl-controls {
+  margin-top: 30px;
 }
 .comments .comment {
   padding: 22px 0;
@@ -2317,9 +2336,20 @@ Blog Detail Styles
   padding-bottom: 0;
   padding-left: 98px;
 }
+@media (max-width: 767px) {
+  .comments .comment .reply {
+    padding-left: 0;
+  }
+}
 .comments-form {
   background-color: #eceef4;
   padding: 24px 36px;
+}
+@media (max-width: 767px) {
+  .comments-form {
+    padding: 24px 15px;
+    margin: 20px -15px 0 -15px;
+  }
 }
 .comments-form .my-form .btn-2 {
   padding: 0 38px;
