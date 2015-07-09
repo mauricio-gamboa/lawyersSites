@@ -1,4 +1,12 @@
 workspace.xml
-site_01/.idea
 .idea
 vcs.xml
+.DS_Store
+
+site_01/.idea
+site_01/bower_components
+site_01/node_modules
+
+site_02/.idea
+site_02/bower_components
+site_02/node_modules
