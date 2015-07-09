@@ -561,6 +561,10 @@ Main Menu Styles
       &:hover {
         color: white;
       }
+
+      @media @medium {
+        padding: 0 31px;
+      }
     }
 
     &.active {
@@ -920,6 +924,10 @@ Practice Areas Styles
   text-align: center;
   padding: 0 90px;
 
+  @media @medium {
+    padding: 0 40px;
+  }
+
   h4 {
     color: @blue-5;
     margin: 32px 0;
@@ -1185,7 +1193,7 @@ Locations Styles
   > div {
     float: left;
 
-    @media @small, @medium, @xs {
+    @media @small, @xs {
       float: none;
     }
 
@@ -1196,7 +1204,7 @@ Locations Styles
     > img {
       margin-right: 30px;
 
-      @media @small, @medium, @xs {
+      @media @small, @xs {
         margin: 0 auto;
         display: block;
       }
@@ -1296,6 +1304,10 @@ Footer Styles
     float: left;
     margin-right: 60px;
 
+    @media @medium {
+      margin-right: 20px;
+    }
+
     @media @small, @xs {
       width: 100%;
       margin: 0 0 35px 0;
@@ -1346,19 +1358,19 @@ Footer Styles
 
   @media @medium {
     &:nth-child(1) {
-      width: 65px;
+      width: 55px;
     }
 
     &:nth-child(2) {
-      width: 140px;
+      width: 120px;
     }
 
     &:nth-child(3) {
-      width: 100px;
+      width: 90px;
     }
 
     &:nth-child(4) {
-      width: 65px;
+      width: 55px;
     }
 
     &:nth-child(5) {
@@ -1546,13 +1558,19 @@ Click Here Styles
   color: white;
   text-transform: uppercase;
 
-  .click-here-item {
-    background: url("../images/sep-4.png") no-repeat 100% 50%;
-    line-height: 114px;
+  .row {
+    > div {
+      background: url("../images/sep-4.png") no-repeat 100% 50%;
 
-    &.no-bg {
-      background: none;
+      &.no-bg {
+        background: none;
+      }
     }
+  }
+
+  .click-here-item {
+    line-height: 114px;
+    text-align: center;
 
     > * {
       vertical-align: middle;
@@ -1575,7 +1593,6 @@ Click Here Styles
   h3 {
     font-size: 24px;
     line-height: 114px;
-    text-align: center;
 
     @media @xs {
       margin-left: 0;

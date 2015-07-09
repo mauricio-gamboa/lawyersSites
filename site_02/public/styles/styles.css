@@ -352,6 +352,11 @@ Main Menu Styles
 .main-menu li a:hover {
   color: white;
 }
+@media (min-width: 993px) and (max-width: 1200px) {
+  .main-menu li a {
+    padding: 0 31px;
+  }
+}
 .main-menu li.active a {
   color: white;
   border-color: white;
@@ -615,6 +620,11 @@ Practice Areas Styles
   text-align: center;
   padding: 0 90px;
 }
+@media (min-width: 993px) and (max-width: 1200px) {
+  .practice {
+    padding: 0 40px;
+  }
+}
 .practice h4 {
   color: #13588f;
   margin: 32px 0;
@@ -832,7 +842,7 @@ Locations Styles
 .location > div {
   float: left;
 }
-@media (min-width: 768px) and (max-width: 992px), (min-width: 993px) and (max-width: 1200px), (max-width: 767px) {
+@media (min-width: 768px) and (max-width: 992px), (max-width: 767px) {
   .location > div {
     float: none;
   }
@@ -845,7 +855,7 @@ Locations Styles
 .location > div > img {
   margin-right: 30px;
 }
-@media (min-width: 768px) and (max-width: 992px), (min-width: 993px) and (max-width: 1200px), (max-width: 767px) {
+@media (min-width: 768px) and (max-width: 992px), (max-width: 767px) {
   .location > div > img {
     margin: 0 auto;
     display: block;
@@ -943,6 +953,11 @@ Footer Styles
   float: left;
   margin-right: 60px;
 }
+@media (min-width: 993px) and (max-width: 1200px) {
+  #footer .logo {
+    margin-right: 20px;
+  }
+}
 @media (min-width: 768px) and (max-width: 992px), (max-width: 767px) {
   #footer .logo {
     width: 100%;
@@ -987,16 +1002,16 @@ Footer Styles
 }
 @media (min-width: 993px) and (max-width: 1200px) {
   .footer-menu:nth-child(1) {
-    width: 65px;
+    width: 55px;
   }
   .footer-menu:nth-child(2) {
-    width: 140px;
+    width: 120px;
   }
   .footer-menu:nth-child(3) {
-    width: 100px;
+    width: 90px;
   }
   .footer-menu:nth-child(4) {
-    width: 65px;
+    width: 55px;
   }
   .footer-menu:nth-child(5) {
     width: auto;
@@ -1170,12 +1185,15 @@ Click Here Styles
   color: white;
   text-transform: uppercase;
 }
-#click-here .click-here-item {
+#click-here .row > div {
   background: url("../images/sep-4.png") no-repeat 100% 50%;
-  line-height: 114px;
 }
-#click-here .click-here-item.no-bg {
+#click-here .row > div.no-bg {
   background: none;
+}
+#click-here .click-here-item {
+  line-height: 114px;
+  text-align: center;
 }
 #click-here .click-here-item > * {
   vertical-align: middle;
@@ -1199,7 +1217,6 @@ Click Here Styles
 #click-here h3 {
   font-size: 24px;
   line-height: 114px;
-  text-align: center;
 }
 @media (max-width: 767px) {
   #click-here h3 {
