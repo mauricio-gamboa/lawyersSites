@@ -23,6 +23,7 @@ Variables
 @blue-10: #1a388a;
 @blue-11: #314c96;
 @blue-12: #132771;
+@blue-13: #3a50a0;
 
 @green-1: #67be66;
 @green-2: #5ba65a;
@@ -480,18 +481,21 @@ Top Header Styles
   }
 
   .ratings {
-    float: left;
+    float: right;
     .border-right(1px, @gray-15);
     .border-left(1px, @gray-15);
     padding: 0 16px;
-    margin-left: 470px;
+
+    @media @small {
+      padding-right: 0;
+      border-right: 0;
+    }
   }
 
   .call {
-    padding-top: 14px;
+    padding: 14px 25px 0 25px;
     float: right;
     .border-right(1px, @gray-15);
-    padding-right: 26px;
     height: 68px;
   }
 
@@ -719,6 +723,10 @@ Header Home Styles
     font-weight: normal;
     margin-top: 67px;
 
+    @media @small {
+      margin-left: 175px;
+    }
+
     > h2 {
       text-transform: uppercase;
       font-size: 35px;
@@ -818,6 +826,10 @@ Overview Styles
   padding-bottom: 35px;
   margin-bottom: 40px;
   text-transform: uppercase;
+
+  @media @small {
+    font-size: 31px;
+  }
 }
 
 .site-subtitle {
@@ -847,6 +859,11 @@ Overview Styles
 
     p {
       color: @gray-8;
+      margin: 0;
+
+      @media @small {
+        min-height: 175px;
+      }
     }
   }
 }
@@ -887,7 +904,7 @@ Lists Styles
         margin-bottom: 0;
 
         @media @small, @xs {
-          margin-bottom: 22px;
+          margin-bottom: 13px;
         }
       }
 
@@ -926,6 +943,10 @@ Practice Areas Styles
 
   @media @medium {
     padding: 0 40px;
+  }
+
+  @media @small {
+    padding: 0;
   }
 
   h4 {
@@ -1205,7 +1226,7 @@ Locations Styles
       margin-right: 30px;
 
       @media @small, @xs {
-        margin: 0 auto;
+        margin: 0 auto 18px 0;
         display: block;
       }
     }
@@ -1394,7 +1415,7 @@ Footer Styles
     text-transform: uppercase;
     margin-bottom: 10px;
 
-    @media @xs {
+    @media @small, @xs {
       text-align: center;
       margin: 0;
       line-height: normal;
@@ -1404,7 +1425,7 @@ Footer Styles
   ul {
     margin: 0;
 
-    @media @xs {
+    @media @small, @xs {
       display: none;
     }
 
@@ -1558,9 +1579,19 @@ Click Here Styles
   color: white;
   text-transform: uppercase;
 
+  @media @small {
+    height: auto;
+    line-height: normal;
+    padding: 20px 0;
+  }
+
   .row {
     > div {
       background: url("../images/sep-4.png") no-repeat 100% 50%;
+
+      @media @small {
+        background: none;
+      }
 
       &.no-bg {
         background: none;
@@ -1571,6 +1602,10 @@ Click Here Styles
   .click-here-item {
     line-height: 114px;
     text-align: center;
+
+    @media @small {
+      line-height: normal;
+    }
 
     > * {
       vertical-align: middle;
@@ -1592,18 +1627,23 @@ Click Here Styles
 
   h3 {
     font-size: 24px;
-    line-height: 114px;
+
+    @media @medium, @small {
+      margin-left: 0;
+      font-size: 22px;
+    }
+
+    @media @small {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      .border-bottom(1px, @blue-13);
+    }
 
     @media @xs {
       margin-left: 0;
       line-height: 68px;
       height: 68px;
       text-align: center;
-    }
-
-    @media @small, @medium {
-      margin-left: 0;
-      font-size: 22px;
     }
   }
 

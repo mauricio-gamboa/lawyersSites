@@ -299,17 +299,21 @@ Top Header Styles
   left: 0;
 }
 #top-header .ratings {
-  float: left;
+  float: right;
   border-right: 1px solid #ebebeb;
   border-left: 1px solid #ebebeb;
   padding: 0 16px;
-  margin-left: 470px;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  #top-header .ratings {
+    padding-right: 0;
+    border-right: 0;
+  }
 }
 #top-header .call {
-  padding-top: 14px;
+  padding: 14px 25px 0 25px;
   float: right;
   border-right: 1px solid #ebebeb;
-  padding-right: 26px;
   height: 68px;
 }
 #top-header .estimate {
@@ -451,6 +455,11 @@ Header Home Styles
   font-weight: normal;
   margin-top: 67px;
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  #header-home .header-home {
+    margin-left: 175px;
+  }
+}
 #header-home .header-home > h2 {
   text-transform: uppercase;
   font-size: 35px;
@@ -536,6 +545,11 @@ Overview Styles
   margin-bottom: 40px;
   text-transform: uppercase;
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  .site-title {
+    font-size: 31px;
+  }
+}
 .site-subtitle {
   background: url("../images/sep-2.png") no-repeat 0 100%;
   font-size: 18px;
@@ -559,6 +573,12 @@ Overview Styles
 }
 #overview .overview-item p {
   color: #303030;
+  margin: 0;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  #overview .overview-item p {
+    min-height: 175px;
+  }
 }
 /***************************
 ****************************
@@ -597,7 +617,7 @@ Lists Styles
 }
 @media (min-width: 768px) and (max-width: 992px), (max-width: 767px) {
   #lists ul li:nth-last-child(-n+3) {
-    margin-bottom: 22px;
+    margin-bottom: 13px;
   }
 }
 #lists ul li i {
@@ -623,6 +643,11 @@ Practice Areas Styles
 @media (min-width: 993px) and (max-width: 1200px) {
   .practice {
     padding: 0 40px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .practice {
+    padding: 0;
   }
 }
 .practice h4 {
@@ -857,7 +882,7 @@ Locations Styles
 }
 @media (min-width: 768px) and (max-width: 992px), (max-width: 767px) {
   .location > div > img {
-    margin: 0 auto;
+    margin: 0 auto 18px 0;
     display: block;
   }
 }
@@ -1032,7 +1057,7 @@ Footer Styles
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-@media (max-width: 767px) {
+@media (min-width: 768px) and (max-width: 992px), (max-width: 767px) {
   .footer-menu h5 {
     text-align: center;
     margin: 0;
@@ -1042,7 +1067,7 @@ Footer Styles
 .footer-menu ul {
   margin: 0;
 }
-@media (max-width: 767px) {
+@media (min-width: 768px) and (max-width: 992px), (max-width: 767px) {
   .footer-menu ul {
     display: none;
   }
@@ -1185,8 +1210,20 @@ Click Here Styles
   color: white;
   text-transform: uppercase;
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  #click-here {
+    height: auto;
+    line-height: normal;
+    padding: 20px 0;
+  }
+}
 #click-here .row > div {
   background: url("../images/sep-4.png") no-repeat 100% 50%;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  #click-here .row > div {
+    background: none;
+  }
 }
 #click-here .row > div.no-bg {
   background: none;
@@ -1194,6 +1231,11 @@ Click Here Styles
 #click-here .click-here-item {
   line-height: 114px;
   text-align: center;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  #click-here .click-here-item {
+    line-height: normal;
+  }
 }
 #click-here .click-here-item > * {
   vertical-align: middle;
@@ -1216,7 +1258,19 @@ Click Here Styles
 }
 #click-here h3 {
   font-size: 24px;
-  line-height: 114px;
+}
+@media (min-width: 993px) and (max-width: 1200px), (min-width: 768px) and (max-width: 992px) {
+  #click-here h3 {
+    margin-left: 0;
+    font-size: 22px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  #click-here h3 {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #3a50a0;
+  }
 }
 @media (max-width: 767px) {
   #click-here h3 {
@@ -1224,12 +1278,6 @@ Click Here Styles
     line-height: 68px;
     height: 68px;
     text-align: center;
-  }
-}
-@media (min-width: 768px) and (max-width: 992px), (min-width: 993px) and (max-width: 1200px) {
-  #click-here h3 {
-    margin-left: 0;
-    font-size: 22px;
   }
 }
 #click-here .call {
