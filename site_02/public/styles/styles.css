@@ -332,6 +332,11 @@ Main Menu Styles
 #main-menu .menu-wrapper {
   margin-left: 138px;
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  #main-menu .menu-wrapper {
+    margin-left: 101px;
+  }
+}
 .main-menu {
   margin: 0;
 }
@@ -358,7 +363,13 @@ Main Menu Styles
 }
 @media (min-width: 993px) and (max-width: 1200px) {
   .main-menu li a {
-    padding: 0 31px;
+    padding: 0 24px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .main-menu li a {
+    font-size: 13px;
+    padding: 0 18px;
   }
 }
 .main-menu li.active a {
@@ -373,6 +384,11 @@ Main Menu Styles
 }
 .main-menu li.sub-menu > a {
   background: url('../images/arrow-2.png') no-repeat 92% 50%;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .main-menu li.sub-menu > a {
+    background-position: 95% 50%;
+  }
 }
 .main-menu li.sub-menu ul {
   display: none;

@@ -518,6 +518,10 @@ Main Menu Styles
   .menu-wrapper {
     margin-left: 138px;
 
+    @media @small {
+      margin-left: 101px;
+    }
+
     //.toggler {
     //  cursor: pointer;
     //  border-radius: 4px;
@@ -567,7 +571,12 @@ Main Menu Styles
       }
 
       @media @medium {
-        padding: 0 31px;
+        padding: 0 24px;
+      }
+
+      @media @small {
+        font-size: 13px;
+        padding: 0 18px;
       }
     }
 
@@ -589,6 +598,10 @@ Main Menu Styles
 
       > a {
         background: url('../images/arrow-2.png') no-repeat 92% 50%;
+
+        @media @small {
+          background-position: 95% 50%;
+        }
       }
 
       ul {
