@@ -782,7 +782,8 @@ Header Home Styles
 
   .header-home,
   .header-about,
-  .header-location {
+  .header-location,
+  .header-blog {
     font-family: 'Lato-Bold';
     color: white;
     font-weight: normal;
@@ -1390,7 +1391,7 @@ Locations Styles
 #header-location {
 
   &.location-1 {
-    background: url("../images/bg-location-1.png") no-repeat 0 0 / cover;
+    background: url("../images/bg-location-1.png") no-repeat 50% 0 / cover;
   }
 
   .header-location {
@@ -2215,7 +2216,7 @@ About Page Styles
 
             &:hover {
               color: white;
-              background: url("../images/bg-archive.png") repeat-x 0 0;
+              background-color: @green-1;
             }
           }
         }
@@ -2405,6 +2406,27 @@ Blog Styles
 ****************************
 ***************************/
 
+#header-blog {
+  background: url("../images/header-blog.png") no-repeat 50% 0 / cover;
+
+  .header-blog {
+    height: 195px;
+    padding-top: 55px;
+
+    h1 {
+      font-size: 30px;
+      line-height: normal;
+      text-shadow: 0 0 4px black;
+      text-transform: uppercase;
+
+      @media @xs {
+        font-size: 25px;
+        text-align: center;
+      }
+    }
+  }
+}
+
 .article {
   .border-bottom(1px, @gray-15);
   margin-bottom: 45px;
@@ -2490,7 +2512,7 @@ Blog Styles
       a {
         font-family: 'Lato-Regular';
         border-radius: 4px;
-        color: @red-1;
+        color: @green-1;
         .border(1px, @gray-19);
         line-height: 32px;
         padding: 0 15px;
@@ -2508,14 +2530,14 @@ Blog Styles
 
         &:hover {
           color: white;
-          background: url("../images/bg-pagination.png") repeat-x 0 0;
+          background-color: @green-1;
         }
       }
 
       &.active {
         a {
           color: white;
-          background: url("../images/bg-pagination.png") repeat-x 0 0;
+          background-color: @green-1;
 
           &:hover {
             .border(1px, @gray-19);
@@ -2535,7 +2557,7 @@ Blog Styles
 
           &:hover {
             background: none;
-            color: @red-1;
+            color: @green-1;
           }
         }
       }

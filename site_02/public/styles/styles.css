@@ -571,33 +571,38 @@ Header Home Styles
 }
 .header .header-home,
 .header .header-about,
-.header .header-location {
+.header .header-location,
+.header .header-blog {
   font-family: 'Lato-Bold';
   color: white;
   font-weight: normal;
 }
 .header .header-home > h1,
 .header .header-about > h1,
-.header .header-location > h1 {
+.header .header-location > h1,
+.header .header-blog > h1 {
   font-size: 64px;
   line-height: 54px;
 }
 @media (max-width: 767px) {
   .header .header-home > h1,
   .header .header-about > h1,
-  .header .header-location > h1 {
+  .header .header-location > h1,
+  .header .header-blog > h1 {
     font-size: 41px;
     line-height: 31px;
   }
 }
 .header .header-home > h1 span,
 .header .header-about > h1 span,
-.header .header-location > h1 span {
+.header .header-location > h1 span,
+.header .header-blog > h1 span {
   font-family: 'PalatinoLTStd-BoldItalic';
 }
 .header .header-home > h2,
 .header .header-about > h2,
-.header .header-location > h2 {
+.header .header-location > h2,
+.header .header-blog > h2 {
   text-transform: uppercase;
   font-size: 35px;
   line-height: normal;
@@ -605,13 +610,15 @@ Header Home Styles
 @media (max-width: 767px) {
   .header .header-home > h2,
   .header .header-about > h2,
-  .header .header-location > h2 {
+  .header .header-location > h2,
+  .header .header-blog > h2 {
     font-size: 18px;
   }
 }
 .header .header-home > h3,
 .header .header-about > h3,
-.header .header-location > h3 {
+.header .header-location > h3,
+.header .header-blog > h3 {
   font-family: 'Lato-Regular';
   font-size: 26px;
   line-height: 32px;
@@ -619,7 +626,8 @@ Header Home Styles
 @media (min-width: 768px) and (max-width: 992px) {
   .header .header-home > h3,
   .header .header-about > h3,
-  .header .header-location > h3 {
+  .header .header-location > h3,
+  .header .header-blog > h3 {
     font-size: 22px;
     line-height: 31px;
   }
@@ -627,7 +635,8 @@ Header Home Styles
 @media (max-width: 767px) {
   .header .header-home > h3,
   .header .header-about > h3,
-  .header .header-location > h3 {
+  .header .header-location > h3,
+  .header .header-blog > h3 {
     text-align: center;
     font-size: 18px;
     line-height: 25px;
@@ -635,7 +644,8 @@ Header Home Styles
 }
 .header .header-home .lawyer-img,
 .header .header-about .lawyer-img,
-.header .header-location .lawyer-img {
+.header .header-location .lawyer-img,
+.header .header-blog .lawyer-img {
   position: absolute;
   bottom: 0;
   left: -150px;
@@ -643,14 +653,16 @@ Header Home Styles
 @media (min-width: 768px) and (max-width: 992px) {
   .header .header-home .lawyer-img,
   .header .header-about .lawyer-img,
-  .header .header-location .lawyer-img {
+  .header .header-location .lawyer-img,
+  .header .header-blog .lawyer-img {
     left: -400px;
   }
 }
 @media (max-width: 767px) {
   .header .header-home .lawyer-img,
   .header .header-about .lawyer-img,
-  .header .header-location .lawyer-img {
+  .header .header-location .lawyer-img,
+  .header .header-blog .lawyer-img {
     width: 500px;
     left: 50%;
     margin-left: -300px;
@@ -658,7 +670,8 @@ Header Home Styles
 }
 .header .header-home .lines,
 .header .header-about .lines,
-.header .header-location .lines {
+.header .header-location .lines,
+.header .header-blog .lines {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -1130,7 +1143,7 @@ Locations Styles
 ****************************
 ***************************/
 #header-location.location-1 {
-  background: url("../images/bg-location-1.png") no-repeat 0 0 / cover;
+  background: url("../images/bg-location-1.png") no-repeat 50% 0 / cover;
 }
 #header-location .header-location {
   height: 195px;
@@ -1909,7 +1922,7 @@ About Page Styles
 }
 .sidebar .widget.archive ul li a:hover {
   color: white;
-  background: url("../images/bg-archive.png") repeat-x 0 0;
+  background-color: #67be66;
 }
 .sidebar .widget.tags img {
   width: 100%;
@@ -2066,6 +2079,25 @@ Location Styles
 Blog Styles
 ****************************
 ***************************/
+#header-blog {
+  background: url("../images/header-blog.png") no-repeat 50% 0 / cover;
+}
+#header-blog .header-blog {
+  height: 195px;
+  padding-top: 55px;
+}
+#header-blog .header-blog h1 {
+  font-size: 30px;
+  line-height: normal;
+  text-shadow: 0 0 4px black;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  #header-blog .header-blog h1 {
+    font-size: 25px;
+    text-align: center;
+  }
+}
 .article {
   border-bottom: 1px solid #ebebeb;
   margin-bottom: 45px;
@@ -2145,7 +2177,7 @@ Blog Styles
 .my-pagination .pagination li a {
   font-family: 'Lato-Regular';
   border-radius: 4px;
-  color: #e61919;
+  color: #67be66;
   border: 1px solid #c8c8c8;
   line-height: 32px;
   padding: 0 15px;
@@ -2165,11 +2197,11 @@ Blog Styles
 }
 .my-pagination .pagination li a:hover {
   color: white;
-  background: url("../images/bg-pagination.png") repeat-x 0 0;
+  background-color: #67be66;
 }
 .my-pagination .pagination li.active a {
   color: white;
-  background: url("../images/bg-pagination.png") repeat-x 0 0;
+  background-color: #67be66;
 }
 .my-pagination .pagination li.active a:hover {
   border: 1px solid #c8c8c8;
@@ -2184,7 +2216,7 @@ Blog Styles
 }
 .my-pagination .pagination li.ell a:hover {
   background: none;
-  color: #e61919;
+  color: #67be66;
 }
 /***************************
 ****************************
