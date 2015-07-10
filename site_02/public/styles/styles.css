@@ -606,6 +606,13 @@ Header Home Styles
   font-size: 26px;
   line-height: 32px;
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  .header .header-home > h3,
+  .header .header-about > h3 {
+    font-size: 22px;
+    line-height: 31px;
+  }
+}
 .header .header-home .lawyer-img,
 .header .header-about .lawyer-img {
   position: absolute;
@@ -991,6 +998,12 @@ Badges Styles
 }
 .badges .my-badge img {
   vertical-align: middle;
+  max-width: 100%;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .badges .my-badge img {
+    max-width: 90%;
+  }
 }
 .facebook-plugin {
   margin-top: 15px;
@@ -1566,6 +1579,11 @@ About Page Styles
     padding-top: 60px;
   }
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  #header-about .header-about {
+    padding-top: 80px;
+  }
+}
 #header-about .header-about > h2 {
   background: url("../images/sep-5.png") no-repeat 0 100%;
   padding-bottom: 40px;
@@ -1616,6 +1634,12 @@ About Page Styles
   font-size: 23px;
   line-height: 33px;
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  .content p.lead,
+  .content li.lead {
+    font-size: 21px;
+  }
+}
 .content p span,
 .content li span {
   color: #e61919;
@@ -1660,7 +1684,6 @@ About Page Styles
   margin: 0 0 30px 0;
   font-size: 19px;
   color: #243c95;
-  text-align: center;
   line-height: normal;
   padding: 0 30px;
 }
