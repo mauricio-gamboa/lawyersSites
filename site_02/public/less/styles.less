@@ -1402,6 +1402,11 @@ Locations Styles
       line-height: normal;
       text-shadow: 0 0 4px black;
       text-transform: uppercase;
+
+      @media @xs {
+        font-size: 25px;
+        text-align: center;
+      }
     }
   }
 }
@@ -2286,6 +2291,12 @@ Location Styles
 .office-meta-data {
   .location {
     > div {
+      &:first-child {
+        @media @xs {
+          display: none;
+        }
+      }
+
       > img {
         width: 170px;
         margin-right: 30px;
@@ -2316,15 +2327,14 @@ Location Styles
           width: auto;
         }
 
-        @media @xs {
-          margin-top: 20px;
-        }
-
         h4 {
           @media @xs {
-            text-align: center;
-            padding-bottom: 0;
-            margin-bottom: 12px;
+            text-align: left;
+            padding-left: 52px;
+
+            img {
+              display: block;
+            }
           }
         }
 
@@ -2333,6 +2343,10 @@ Location Styles
           position: relative;
           z-index: 10;
           margin: 0;
+
+          @media @xs {
+            float: left;
+          }
         }
 
         address, .phone {
@@ -2368,6 +2382,12 @@ Location Styles
           }
         }
       }
+    }
+
+    @media @xs {
+      border-bottom: none;
+      margin: 0;
+      padding-bottom: 0;
     }
   }
 
