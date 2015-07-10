@@ -508,7 +508,6 @@ Main Menu Styles
   line-height: 20px;
 }
 .call > span > span.phone {
-  font-family: 'Lato-Regular';
   font-size: 19px;
   color: #67be66;
 }
@@ -980,6 +979,7 @@ Client Reviews Styles
 .review-slide p {
   font-size: 16px;
   line-height: 31px;
+  line-height: 27px;
   color: #252525;
 }
 .review-slide p:last-child {
@@ -1051,6 +1051,7 @@ Badges Styles
 #contact-form p {
   font-size: 16px;
   line-height: 31px;
+  line-height: 26px;
   text-align: left;
 }
 #contact-form + .disclosure {
