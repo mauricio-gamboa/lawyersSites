@@ -22,8 +22,11 @@ Variables
 @blue-9: #3263cd;
 @blue-10: #1a388a;
 @blue-11: #314c96;
+@blue-12: #132771;
+@blue-13: #3a50a0;
 
 @green-1: #67be66;
+@green-2: #5ba65a;
 
 @gray-1: #f5f5f5;
 @gray-2: #eceef4;
@@ -45,6 +48,7 @@ Variables
 @gray-18: #2e2e2e;
 @gray-19: #c8c8c8;
 @gray-20: #959595;
+@gray-21: #464646;
 
 @red-1: #e61919;
 @red-2: #b71616;
@@ -227,7 +231,7 @@ Fonts
 
 .font-1 {
   font-size: 16px;
-  line-height: 26px;
+  line-height: 31px;
 }
 
 /***************************
@@ -237,7 +241,6 @@ General Styles
 ***************************/
 
 body {
-  background: url('../images/bg-main.jpg') repeat-x 0 0;
   font-family: 'proxima_nova_regular';
   color: @main-text-color;
 }
@@ -253,39 +256,27 @@ a {
 
   a {
     background: url('../images/logo.png') no-repeat 0 0;
-    width: 175px;
-    height: 50px;
+    width: 447px;
+    height: 149px;
     display: block;
     text-indent: -9999px;
-    font-family: 'proxima_nova_semibold';
   }
 
   &.color {
     a {
       background: url('../images/logo-color.png') no-repeat 0 0;
+      height: 63px;
+      width: 270px;
     }
   }
-}
 
-.bg-lines-1 {
-  background: url('../images/bg-lines-1.jpg') repeat-x 0 0;
-}
-
-.bg-lines-2 {
-  background: url('../images/bg-lines-2.jpg') repeat-x 0 0;
-}
-
-.bg-lines-3 {
-  background: url('../images/bg-lines-3.jpg') repeat-x 0 0;
-}
-
-.bg-gradient-1 {
-  background: url('../images/bg-gradient-1-top.png') repeat-x 0 0,
-  url('../images/bg-gradient-1-botton.png') repeat-x 0 100% @gray-2;
-}
-
-.bg-gradient-2 {
-  background: url('../images/bg-gradient-1-top.png') repeat-x 0 0 white;
+  &.small {
+    a {
+      background: url('../images/logo-small.png') no-repeat 0 0;
+      width: 320px;
+      height: 108px;
+    }
+  }
 }
 
 .gray-border {
@@ -311,7 +302,7 @@ a {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: normal;
-  font-family: 'proxima_nova_bold';
+  font-family: 'Lato-Bold';
 }
 
 .star-title {
@@ -375,6 +366,10 @@ h1, h2, h3, h4, h5, h6 {
   background-color: white;
 }
 
+.gray-bg {
+  background-color: @gray-13;
+}
+
 /***************************
 ****************************
 Buttons Styles
@@ -382,12 +377,11 @@ Buttons Styles
 ***************************/
 
 .my-btn {
+  font-family: 'Lato-Bold';
   .round-border(4px);
-  box-shadow: 0 1px 2px -1px #000000;
   color: white;
   display: inline-block;
-  font-family: "proxima_nova_semibold";
-  font-size: 15px;
+  font-size: 14px;
   padding: 0 20px;
   text-transform: uppercase;
   text-align: center;
@@ -399,12 +393,14 @@ Buttons Styles
   }
 
   &.btn-1 {
-    background: url('../images/bg-btn-1.jpg') repeat-x 0 0;
+    .border(1px, @green-1);
+    background-color: @green-1;
     height: 44px;
     line-height: 44px;
 
     &:hover {
-      background-position: 0 -44px;
+      background-color: white;
+      color: @green-2;
     }
   }
 
@@ -477,122 +473,105 @@ Buttons Styles
 
 /***************************
 ****************************
+Top Header Styles
+****************************
+***************************/
+
+#top-header {
+  background-color: white;
+  height: 68px;
+  line-height: 68px;
+
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @media @xs {
+      top: 10px;
+    }
+  }
+
+  .ratings {
+    float: right;
+    .border-right(1px, @gray-15);
+    .border-left(1px, @gray-15);
+    padding: 0 16px;
+
+    @media @small {
+      padding-right: 0;
+      border-right: 0;
+    }
+  }
+
+  .call {
+    padding: 14px 25px 0 25px;
+    float: right;
+    .border-right(1px, @gray-15);
+    height: 68px;
+  }
+
+  .estimate {
+    float: right;
+    margin-left: 30px;
+  }
+}
+
+/***************************
+****************************
 Main Menu Styles
 ****************************
 ***************************/
 
-.white-menu {
-  transition: background 0.5s ease;
-  .border-top(3px, @red-1);
-  background: white;
-  box-shadow: 0 0 5px -1px #000000;
-
-  .menu-wrapper {
-    padding: 10px 0;
-
-    .toggler {
-      background: url('../images/bg-toggler.jpg') repeat-x 0 0;
-
-      &:hover {
-        background-position: 0 -42px;
-      }
-    }
-
-    .logo {
-      a {
-        background: url('../images/logo-color.png') no-repeat 0 0;
-      }
-    }
-
-    .main-menu {
-      li {
-        a {
-          color: @blue-8;
-
-          &:hover {
-            color: @blue-9;
-          }
-        }
-
-        &.sub-menu {
-
-          &:hover {
-            a {
-              color: white;
-            }
-          }
-
-          ul {
-            li {
-              a {
-                color: @white-1;
-
-                &:hover {
-                  color: white;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .main-menu-mobile {
-      top: 70px;
-    }
-
-    .call {
-      .phone-icon {
-        .icon(36px, @red-1, white, 22px);
-      }
-
-      > span {
-        > span {
-          color: @blue-6;
-
-          &.phone {
-            color: @red-1;
-          }
-        }
-      }
-    }
-  }
-}
-
 #main-menu {
-  background: url('../images/bg-lines-1.jpg') repeat-x 0 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-
-  &.white {
-    .white-menu;
-  }
+  background-color: @blue-6;
+  height: 62px;
 
   @media @xs {
-    .white-menu;
+    height: auto;
+    padding: 9px 0;
   }
 
   .menu-wrapper {
-    transition: padding 0.5s ease;
-    padding: 25px 0;
+    margin-left: 138px;
+
+    @media @small {
+      margin-left: 101px;
+    }
 
     @media @xs {
-      padding: 10px 0;
+      margin-left: 0;
+    }
+
+    .btn-1, .toggler {
+      height: 32px;
+      line-height: 32px;
+      float: right;
+    }
+
+    .btn-1 {
+      display: none;
+      font-size: 17px;
+      width: 181px;
+      padding: 0;
+      text-align: center;
+
+      i {
+        margin-right: 5px;
+      }
+
+      @media @xs {
+        display: inline-block;
+      }
     }
 
     .toggler {
       cursor: pointer;
-      border-radius: 4px;
       color: @white-1;
-      float: right;
       font-size: 20px;
-      height: 42px;
-      line-height: 37px;
-      margin-left: 20px;
-      text-align: center;
-      width: 42px;
+      .border-left(1px, @blue-13);
+      padding-left: 15px;
+      margin-left: 15px;
 
       &:hover {
         color: white;
@@ -602,46 +581,27 @@ Main Menu Styles
         vertical-align: middle;
       }
     }
-
-    .logo {
-      float: left;
-    }
-
-    .main-menu {
-      float: left;
-      margin-left: 55px;
-
-      @media @medium {
-        margin-left: 10px;
-      }
-    }
-
-    .call {
-      float: right;
-
-      @media @small {
-        .border-right(1px, white);
-        padding-right: 20px;
-      }
-    }
   }
 }
 
 .main-menu {
   margin: 0;
+
   li {
     float: left;
+    position: relative;
+    z-index: 10;
 
     a {
       color: @white-1;
       .border-bottom(3px, transparent);
       display: block;
       font-size: 14px;
-      height: 50px;
-      line-height: 50px;
+      height: 62px;
+      line-height: 64px;
       text-decoration: none;
       text-transform: uppercase;
-      padding: 0 25px;
+      padding: 0 38px;
       position: relative;
       z-index: 10;
 
@@ -650,13 +610,19 @@ Main Menu Styles
       }
 
       @media @medium {
-        padding: 0 20px;
+        padding: 0 24px;
+      }
+
+      @media @small {
+        font-size: 13px;
+        padding: 0 18px;
       }
     }
 
     &.active {
       a {
-        border-color: @red-1;
+        color: white;
+        border-color: white;
       }
     }
 
@@ -671,6 +637,10 @@ Main Menu Styles
 
       > a {
         background: url('../images/arrow-2.png') no-repeat 92% 50%;
+
+        @media @small {
+          background-position: 95% 50%;
+        }
       }
 
       ul {
@@ -681,7 +651,7 @@ Main Menu Styles
         left: 0;
         background-color: @blue-10;
         width: 100%;
-        padding-top: 50px;
+        padding-top: 62px;
 
         li {
           float: none;
@@ -705,51 +675,54 @@ Main Menu Styles
   }
 }
 
-.main-menu-mobile {
-  transition: top 0.5s ease;
-  margin: 0;
+#mobile-menu {
   position: absolute;
   width: 100%;
   left: 0;
-  top: 100px;
+  top: 118px;
   background-color: red;
+  z-index: 10;
 
-  li {
-    .border-bottom(1px, @red-5);
+  ul {
+    margin: 0;
 
-    &:last-child {
-      border-bottom: none;
-    }
+    li {
+      .border-bottom(1px, @green-2);
 
-    &.active {
-      a {
-        color: white;
-        background-color: @red-4;
+      &:last-child {
+        border-bottom: none;
       }
-    }
 
-    a {
-      font-family: 'proxima_nova_semibold';
-      color: @white-1;
-      font-size: 14px;
-      text-transform: uppercase;
-      background-color: @red-3;
-      display: block;
-      height: 50px;
-      line-height: 50px;
-      padding: 0 54px;
+      &.active {
+        a {
+          color: white;
+          background-color: @green-2;
+        }
+      }
 
-      &:hover {
-        color: white;
-        text-decoration: none;
+      a {
+        font-family: 'Lato-Bold';
+        color: @white-1;
+        font-size: 14px;
+        text-transform: uppercase;
+        background-color: @green-1;
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        padding: 0 54px;
+
+        &:hover {
+          color: white;
+          text-decoration: none;
+        }
       }
     }
   }
 }
 
 .call {
-  font-family: 'proxima_nova_semibold';
-  color: @white-1;
+  font-family: 'Lato-Bold';
+  color: @blue-6;
   text-transform: uppercase;
   font-size: 13px;
 
@@ -760,18 +733,23 @@ Main Menu Styles
 
     > span {
       &.phone {
+        font-family: 'Lato-Regular';
         font-size: 19px;
+        color: @green-1;
+
+        a {
+          color: @green-1;
+
+          &:hover {
+            color: @green-2;
+          }
+        }
       }
     }
 
     &.phone-icon {
-      .icon(31px, @blue-1, @blue-2, 20px);
+      .icon(31px, @green-1, white, 20px);
       margin-right: 10px;
-      margin-top: 2px;
-
-      i {
-        vertical-align: middle;
-      }
     }
   }
 }
@@ -783,70 +761,49 @@ Header Home Styles
 ***************************/
 
 .header {
-  margin-top: 106px;
   position: relative;
-
-  @media @small, @medium, @xs {
-    overflow: hidden;
-  }
-
-  @media @xs {
-    margin-top: 73px;
-  }
-
-  blockquote {
-    background: rgba(0, 0, 0, 0) url("../images/quotes.png") no-repeat scroll 0 0;
-    border: medium none;
-    color: #fff;
-    font-family: SabonLTStd-Italic;
-    font-size: 30px;
-    line-height: 35px;
-    padding: 0 0 0 62px;
-
-    & + .cite {
-      p {
-        font-family: 'SabonLTStd-Roman';
-        color: white;
-        font-size: 18px;
-        line-height: normal;
-        margin: 0;
-      }
-    }
-  }
 }
 
 #header-home {
+  background: url("../images/bg-header-home.png") no-repeat 50% 100%;
+  background-size: cover;
+  overflow: hidden;
+
   .header-home {
+    font-family: 'Lato-Bold';
     position: relative;
-    height: 781px;
+    padding-left: 400px;
+    color: white;
+    font-weight: normal;
+    padding-top: 67px;
+    height: 595px;
+
+    @media @small {
+      padding-left: 205px;
+    }
 
     @media @xs {
-      height: 830px;
+      padding: 38px 0 0 0;
+      text-align: center;
+    }
+
+    > h2 {
+      text-transform: uppercase;
+      font-size: 35px;
+      line-height: normal;
+
+      @media @xs {
+        font-size: 18px;
+      }
     }
 
     > h1 {
-      position: absolute;
-      left: 0;
-      top: 145px;
-      color: white;
-      font-size: 76px;
-      line-height: 76px;
-
-      @media @medium {
-        font-size: 68px;
-      }
-
-      @media @small {
-        font-size: 55px;
-        line-height: 62px;
-      }
+      font-size: 64px;
+      line-height: 54px;
 
       @media @xs {
-        font-size: 35px;
-        text-align: center;
-        line-height: normal;
-        width: 100%;
-        top: 100px;
+        font-size: 41px;
+        line-height: 31px;
       }
 
       span {
@@ -854,225 +811,190 @@ Header Home Styles
       }
     }
 
-    .stripe {
-      background: url('../images/bg-blue.jpg') no-repeat 0 0;
-      color: white;
-      font-size: 27px;
-      height: 53px;
-      line-height: 53px;
-      padding-right: 16px;
-      position: absolute;
-      right: 805px;
-      text-align: right;
-      text-transform: uppercase;
-      top: 54px;
-      width: 1553px;
+    .how-much-owe {
+      width: 418px;
+      margin-top: 45px;
+      padding: 45px 0 35px 0;
+      .border-bottom(2px, @green-1);
+      position: relative;
 
-      @media @xs {
-        right: 0;
-        top: 25px;
-        font-size: 21px;
+      h5 {
+        background: url("../images/line-1.png") no-repeat 100% 50%;
+        font-size: 15px;
+        text-transform: uppercase;
+        margin: 0;
+        line-height: normal;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
       }
 
-      @media @medium {
-        right: 605px;
+      .btn-group {
+        margin-right: 24px;
       }
 
-      @media @small {
-        right: 455px;
-        font-size: 21px;
+      .btn-group,
+      .btn-1 {
+        float: left;
+      }
+
+      .btn-default,
+      .btn-1 {
+        box-shadow: 0 1px 2px -1px #000000;
+        line-height: 55px;
+        height: 55px;
+        padding: 0;
+        text-align: center;
+        font-size: 17px;
+        border: none;
+
+        .caret {
+          float: right;
+          margin-top: 25px;
+          margin-right: 24px;
+        }
+      }
+
+      .btn-default {
+        width: 212px;
+      }
+
+      .btn-1 {
+        width: 182px;
       }
     }
 
     .lawyer-img {
       position: absolute;
       bottom: 0;
-      right: 21px;
-      z-index: 10;
-
-      @media @xs {
-        bottom: auto;
-        margin-right: -180px;
-        right: 50%;
-        top: 250px;
-        z-index: 0;
-      }
-
-      @media @medium {
-        right: -90px;
-      }
+      left: -200px;
 
       @media @small {
-        right: -193px;
+        left: -400px;
       }
-    }
-
-    .btn-3 {
-      position: absolute;
-      top: 450px;
-      left: 0;
 
       @media @xs {
-        bottom: 212px;
-        top: auto;
-        z-index: 10;
+        width: 500px;
         left: 50%;
-        margin-left: -129px;
-      }
-
-      @media @small {
-        top: 375px;
+        margin-left: -300px;
       }
     }
-  }
 
-  .home-quote {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-
-    .divider {
-      left: -1015px;
+    .lines {
       position: absolute;
-      top: 110px;
+      bottom: 0;
+      left: 50%;
+      margin-left: -1800px;
+    }
 
-      @media @xs {
-        left: -240px;
-        top: 95px;
+    .button-wrapper {
+      position: absolute;
+      bottom: 65px;
+      z-index: 10;
+      left: 50%;
+      margin-left: -91px;
+
+      .btn-1 {
+        height: 55px;
+        line-height: 55px;
+        padding: 0;
+        text-align: center;
+        width: 182px;
+        font-size: 15px;
       }
-
-      @media @medium {
-        left: -815px;
-      }
-
-      @media @small {
-        left: -595px;
-      }
-    }
-  }
-}
-
-.home-quote {
-  background: url('../images/bg-blue-big.jpg') repeat-x 0 0;
-  height: 186px;
-
-  blockquote {
-    margin: 24px 0 0 0;
-
-    @media @xs {
-      font-size: 18px;
-      line-height: normal;
-      margin-bottom: 45px;
-      padding-left: 45px;
-    }
-
-    @media @small {
-      font-size: 23px;
-    }
-
-    p {
-      margin: 0;
-    }
-  }
-
-  .cite {
-    margin-top: 30px;
-    padding-left: 62px;
-
-    @media @xs {
-      padding-left: 0;
-    }
-  }
-
-  .arrow {
-    position: absolute;
-    top: -48px;
-    right: 700px;
-
-    @media @xs {
-      display: none;
-    }
-
-    @media @medium {
-      right: 550px;
-    }
-
-    @media @small {
-      right: 470px;
     }
   }
 }
 
 /***************************
 ****************************
-We Help Styles
+Overview Styles
 ****************************
 ***************************/
-#we-help {
-  h3 {
-    text-transform: uppercase;
+
+.lead {
+  color: @gray-21;
+  font-size: 19px;
+  line-height: 30px;
+  margin: 0;
+
+  @media @xs {
+    font-size: 17px;
+    line-height: 24px;
+  }
+}
+
+.site-title {
+  background: url("../images/sep-1.png") no-repeat 50% 100%;
+  font-size: 32px;
+  color: @blue-6;
+  text-align: center;
+  padding-bottom: 35px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+
+  @media @small {
+    font-size: 31px;
+  }
+
+  @media @xs {
     font-size: 24px;
-    line-height: 22px;
-    margin: 0;
-    color: @blue-3;
+  }
+}
 
-    @media @xs {
-      font-size: 21px;
-    }
+.site-subtitle {
+  background: url("../images/sep-2.png") no-repeat 50% 100%;
+  font-size: 18px;
+  color: @blue-6;
+  text-transform: uppercase;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
 
-    @media @medium {
-      font-size: 20px;
-    }
+  @media @xs {
+    text-align: center;
+  }
+}
 
-    @media @small {
-      font-size: 22px;
-    }
+#overview {
+  .site-title {
+    text-transform: none;
+  }
 
-    &.stripe {
-      background-color: @red-1;
-      color: white;
-      left: -814px;
-      line-height: 33px;
-      padding-right: 11px;
-      position: absolute;
-      text-align: right;
-      top: 25px;
-      width: 1000px;
+  header {
+    margin-bottom: 40px;
 
-      @media @xs {
-        left: -834px;
-      }
-
-      @media @medium {
-        left: -840px;
-      }
-
-      @media @small {
-        left: -827px;
-      }
+    .lead {
+      text-align: center;
     }
   }
 
-  p {
-    font-size: 17px;
-    line-height: 26px;
-    margin: 67px 0 0;
+  .overview-item {
+    .font-1;
+
+    p {
+      color: @gray-8;
+      margin: 0;
+
+      @media @small {
+        min-height: 175px;
+      }
+    }
+  }
+}
+
+/***************************
+****************************
+Lists Styles
+****************************
+***************************/
+#lists {
+  .lead {
+    color: @blue-6;
 
     @media @xs {
+      text-align: center;
       margin-bottom: 20px;
-    }
-
-    @media @medium {
-      font-size: 15px;
-    }
-
-    @media @small {
-      font-size: 16px;
-    }
-
-    span {
-      font-family: 'proxima_nova_bold';
     }
   }
 
@@ -1083,11 +1005,13 @@ We Help Styles
       .font-1;
       float: left;
       width: 33.33%;
-      margin-bottom: 22px;
+      margin-bottom: 13px;
 
       @media @xs {
-        font-size: 15px;
-        width: 50%;
+        font-size: 16px;
+        width: 100%;
+        line-height: 25px;
+        margin-bottom: 5px !important;
 
         &:last-child {
           margin-bottom: 0 !important;
@@ -1102,7 +1026,7 @@ We Help Styles
         margin-bottom: 0;
 
         @media @small, @xs {
-          margin-bottom: 22px;
+          margin-bottom: 13px;
         }
       }
 
@@ -1119,16 +1043,43 @@ Practice Areas Styles
 ****************************
 ***************************/
 
-#practice-areas,
-#locations {
+#locations,
+#overview {
   .owl-controls {
     margin-top: 20px;
   }
 }
 
+.site-other-sub-title {
+  background: url("../images/sep-3.png") no-repeat 50% 100%;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: @blue-6;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+}
+
 .practice {
   text-align: center;
-  padding: 0 10px;
+  padding: 0 90px;
+
+  @media @xs {
+    padding: 0 0 30px 0;
+    .border-bottom(1px, @gray-13);
+    margin-bottom: 30px;
+  }
+
+  &.last {
+    @media @xs {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  @media @medium {
+    padding: 0 40px;
+  }
 
   @media @small {
     padding: 0;
@@ -1140,12 +1091,9 @@ Practice Areas Styles
   }
 
   p {
-    .font-1;
+    font-size: 17px;
+    line-height: 28px;
     margin: 0;
-
-    @media @medium {
-      font-size: 14px;
-    }
   }
 
   .btn-1 {
@@ -1160,6 +1108,13 @@ Practice Areas Styles
 As Seen On Styles
 ****************************
 ***************************/
+
+#as-seen-on {
+  .site-title {
+    .site-padding-top;
+    .border-top(1px, @gray-13);
+  }
+}
 
 .aso-wrapper {
   .aso {
@@ -1244,7 +1199,7 @@ Owl Styles
 
         &.active {
           span {
-            background: url('../images/bg-owl-control.png') repeat-x 0 0;
+            background-color: @green-1;
           }
         }
       }
@@ -1294,33 +1249,7 @@ Badges Styles
 
   p {
     .font-1;
-  }
-
-  .my-form {
-
-    .btn-2 {
-      margin-top: 23px;
-
-      @media @small, @xs {
-        width: 100%;
-        margin-top: 0;
-      }
-    }
-
-    img {
-      float: right;
-      margin-top: 23px;
-
-      @media @medium {
-        width: 160px;
-      }
-
-      @media @small, @xs {
-        float: none;
-        margin: 5px auto 0 auto;
-        display: block;
-      }
-    }
+    text-align: left;
   }
 
   & + .disclosure {
@@ -1337,7 +1266,7 @@ Badges Styles
     margin: 0;
 
     span {
-      color: @red-1;
+      color: @green-1;
       font-weight: bold;
       text-transform: uppercase;
     }
@@ -1346,6 +1275,36 @@ Badges Styles
 
 .my-form {
   text-align: left;
+
+  .btn-1 {
+    margin-top: 23px;
+    height: 48px;
+    line-height: 48px;
+    width: 193px;
+    padding: 0;
+    text-align: center;
+
+    @media @small, @xs {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+
+  img {
+    float: right;
+    margin-top: 23px;
+    height: 48px;
+
+    @media @medium {
+      width: 160px;
+    }
+
+    @media @small, @xs {
+      float: none;
+      margin: 5px auto 0 auto;
+      display: block;
+    }
+  }
 
   .form-group {
     margin-bottom: 10px;
@@ -1370,7 +1329,7 @@ Badges Styles
       }
 
       &:focus {
-        border-color: @orange-1;
+        border-color: @green-1;
         box-shadow: none;
       }
     }
@@ -1388,10 +1347,24 @@ Locations Styles
   line-height: 21px;
   color: @gray-8;
 
+  @media @xs {
+    padding: 0 0 30px 0;
+    .border-bottom(1px, @gray-13);
+    margin-bottom: 30px;
+  }
+
+  &.last {
+    @media @xs {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
   > div {
     float: left;
 
-    @media @small, @medium, @xs {
+    @media @small, @xs {
       float: none;
     }
 
@@ -1400,26 +1373,41 @@ Locations Styles
     }
 
     > img {
-      margin-right: 16px;
+      margin-right: 30px;
 
-      @media @small, @medium, @xs {
-        margin: 0 auto;
+      @media @small, @xs {
+        margin: 0 auto 18px;
         display: block;
       }
     }
 
-    h4 {
-      color: @blue-4;
+    .site-subtitle {
+      color: @gray-8;
+      position: relative;
+      padding-left: 52px;
       font-size: 21px;
-      text-transform: uppercase;
-      .border-bottom(2px, @gray-7);
-      margin-top: 12px;
-      margin-bottom: 24px;
-      padding-bottom: 16px;
+      line-height: normal;
+      padding-bottom: 25px;
+      margin-bottom: 25px;
 
-      @media @small, @medium, @xs {
-        margin-top: 22px;
-        text-align: center;
+      @media @xs {
+        padding-left: 0;
+      }
+
+      > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        @media @xs {
+          display: none;
+        }
+      }
+
+      > span {
+        display: block;
+        font-size: 15px;
+        color: @gray-10;
       }
     }
 
@@ -1440,18 +1428,22 @@ Locations Styles
         padding: 0;
       }
 
-      span {
+      > span {
         position: absolute;
         top: 0;
         left: 0;
         display: block;
         .round-border(100%);
-        .icon(25px, @red-1, white, 16px);
+        .icon(25px, @gray-10, white, 16px);
 
         @media @xs {
           display: none;
         }
       }
+    }
+
+    .btn-1 {
+      margin-top: 10px;
     }
   }
 }
@@ -1463,8 +1455,6 @@ Footer Styles
 ***************************/
 
 #footer {
-  background-color: @gray-9;
-
   #top {
     padding: 35px 0;
     .border-bottom(1px, @gray-4);
@@ -1492,6 +1482,10 @@ Footer Styles
   .logo {
     float: left;
     margin-right: 60px;
+
+    @media @medium {
+      margin-right: 20px;
+    }
 
     @media @small, @xs {
       width: 100%;
@@ -1522,19 +1516,19 @@ Footer Styles
   }
 
   &:nth-child(1) {
-    width: 100px;
+    width: 90px;
   }
 
   &:nth-child(2) {
-    width: 195px;
+    width: 155px;
   }
 
   &:nth-child(3) {
-    width: 160px;
+    width: 130px;
   }
 
   &:nth-child(4) {
-    width: 100px;
+    width: 85px;
   }
 
   &:nth-child(5) {
@@ -1543,19 +1537,19 @@ Footer Styles
 
   @media @medium {
     &:nth-child(1) {
-      width: 65px;
+      width: 55px;
     }
 
     &:nth-child(2) {
-      width: 140px;
+      width: 120px;
     }
 
     &:nth-child(3) {
-      width: 100px;
+      width: 90px;
     }
 
     &:nth-child(4) {
-      width: 65px;
+      width: 55px;
     }
 
     &:nth-child(5) {
@@ -1579,7 +1573,7 @@ Footer Styles
     text-transform: uppercase;
     margin-bottom: 10px;
 
-    @media @xs {
+    @media @small, @xs {
       text-align: center;
       margin: 0;
       line-height: normal;
@@ -1589,7 +1583,7 @@ Footer Styles
   ul {
     margin: 0;
 
-    @media @xs {
+    @media @small, @xs {
       display: none;
     }
 
@@ -1670,17 +1664,16 @@ Footer Styles
     }
 
     .phone-icon {
-      .icon(36px, @red-1, white, 22px);
+      .icon(36px, @green-1, white, 22px);
     }
 
     > span {
       > span {
         color: @blue-6;
         font-size: 15px;
-        font-family: 'proxima_nova_bold';
 
         &.phone {
-          color: @red-1;
+          color: @green-1;
           font-size: 21px;
         }
       }
@@ -1739,85 +1732,90 @@ Click Here Styles
 ***************************/
 
 #click-here {
-  background: url('../images/bg-blue-red.jpg') no-repeat 50% 0;
-  height: 119px;
+  background-color: @blue-6;
+  height: 114px;
   color: white;
   text-transform: uppercase;
-  line-height: 119px;
+
+  @media @small, @xs {
+    height: auto;
+    line-height: normal;
+    padding: 20px 0;
+  }
 
   @media @xs {
-    background: url('../images/bg-blue-red-mobile.png') repeat-x 0 0;
-    height: 252px;
+    padding: 5px 0;
   }
 
-  @media @medium {
-    background-position: 48% 0;
+  .row {
+    > div {
+      background: url("../images/sep-4.png") no-repeat 100% 50%;
+
+      @media @small {
+        background: none;
+      }
+
+      &.no-bg {
+        background: none;
+      }
+    }
   }
 
-  @media @small {
-    background-position: 45% 0;
-  }
-
-  .btn-2 {
-    width: 182px;
+  .click-here-item {
+    line-height: 114px;
     text-align: center;
-    font-size: 24px;
-    padding: 0;
-    margin-right: 20px;
 
     @media @xs {
-      margin: 16px auto 0 auto;
-      display: block;
+      padding: 15px 0;
     }
 
-    @media @small, @medium {
-      margin-left: 10px;
+    @media @small, @xs {
+      line-height: normal;
+    }
+
+    > * {
+      vertical-align: middle;
+    }
+
+    &.middle {
+      @media @xs {
+        .border-top(1px, @blue-13);
+        .border-bottom(1px, @blue-13);
+      }
     }
   }
 
   h3 {
     font-size: 24px;
-    margin-left: 30px;
-    line-height: 119px;
+    display: inline-block;
 
-    @media @xs {
-      margin-left: 0;
-      line-height: 68px;
-      height: 68px;
-      text-align: center;
-    }
-
-    @media @small, @medium {
+    @media @medium, @small {
       margin-left: 0;
       font-size: 22px;
     }
-  }
-
-  h4 {
-    .border-bottom(2px, @blue-7);
-    .border-top(2px, @blue-7);
-    font-size: 24px;
-    padding: 13px 0;
-    margin-top: 27px;
-    float: right;
-
-    @media @xs {
-      float: none;
-      text-align: center;
-      font-size: 23px;
-      padding: 10px 0;
-      margin-top: 20px;
-    }
-
-    @media @medium {
-      font-size: 18px;
-      line-height: 27px;
-    }
 
     @media @small {
-      font-size: 23px;
-      line-height: 22px;
-      padding: 5px 0;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      .border-bottom(1px, @blue-13);
+    }
+
+    @media @xs {
+      font-size: 16px;
+    }
+  }
+
+  .call {
+    display: inline-block;
+
+    > span {
+      color: white;
+      text-align: left;
+
+      &.phone-icon {
+        .icon(47px, @blue-12, white, 20px);
+        margin-right: 20px;
+      }
     }
   }
 }
@@ -2061,7 +2059,7 @@ About Page Styles
 
     h4 {
       font-size: 15px;
-      color: #243c95;
+      color: @blue-6;
       line-height: 30px;
       margin-bottom: 20px;
       text-transform: uppercase;
