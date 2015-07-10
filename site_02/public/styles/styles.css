@@ -1712,7 +1712,7 @@ About Page Styles
 }
 .content p span,
 .content li span {
-  color: #e61919;
+  color: #67be66;
 }
 .content h1,
 .content h2,
@@ -1988,6 +1988,7 @@ Location Styles
   float: right;
   position: relative;
   z-index: 10;
+  margin: 0;
 }
 .office-meta-data .location > div + div address,
 .office-meta-data .location > div + div .phone {
