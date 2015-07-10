@@ -1561,6 +1561,11 @@ About Page Styles
   height: 415px;
   padding-top: 90px;
 }
+@media (min-width: 993px) and (max-width: 1200px) {
+  #header-about .header-about {
+    padding-top: 60px;
+  }
+}
 #header-about .header-about > h2 {
   background: url("../images/sep-5.png") no-repeat 0 100%;
   padding-bottom: 40px;
@@ -1656,6 +1661,8 @@ About Page Styles
   font-size: 19px;
   color: #243c95;
   text-align: center;
+  line-height: normal;
+  padding: 0 30px;
 }
 .sidebar .widget {
   font-size: 15px;
