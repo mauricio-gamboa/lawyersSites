@@ -613,6 +613,14 @@ Header Home Styles
     line-height: 31px;
   }
 }
+@media (max-width: 767px) {
+  .header .header-home > h3,
+  .header .header-about > h3 {
+    text-align: center;
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
 .header .header-home .lawyer-img,
 .header .header-about .lawyer-img {
   position: absolute;
@@ -1584,13 +1592,34 @@ About Page Styles
     padding-top: 80px;
   }
 }
+@media (max-width: 767px) {
+  #header-about .header-about {
+    height: 420px;
+    padding-top: 27px;
+  }
+}
 #header-about .header-about > h2 {
   background: url("../images/sep-5.png") no-repeat 0 100%;
   padding-bottom: 40px;
   margin-bottom: 35px;
 }
+@media (max-width: 767px) {
+  #header-about .header-about > h2 {
+    background-position: 50% 100%;
+    text-align: center;
+    padding-bottom: 19px;
+    margin-bottom: 19px;
+  }
+}
 #header-about .header-about .lawyer-img {
   bottom: -135px;
+}
+@media (max-width: 767px) {
+  #header-about .header-about .lawyer-img {
+    bottom: -75px;
+    margin-left: -230px;
+    width: 350px;
+  }
 }
 .content-margin {
   margin-bottom: 20px;
@@ -1622,6 +1651,11 @@ About Page Styles
   width: 25%;
   line-height: 103px;
 }
+@media (max-width: 767px) {
+  .content .badges .my-badge {
+    width: 50%;
+  }
+}
 .content p,
 .content li {
   font-size: 16px;
@@ -1638,6 +1672,13 @@ About Page Styles
   .content p.lead,
   .content li.lead {
     font-size: 21px;
+  }
+}
+@media (max-width: 767px) {
+  .content p.lead,
+  .content li.lead {
+    font-size: 22px;
+    line-height: 31px;
   }
 }
 .content p span,

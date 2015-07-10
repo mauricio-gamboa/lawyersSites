@@ -815,6 +815,12 @@ Header Home Styles
         font-size: 22px;
         line-height: 31px;
       }
+
+      @media @xs {
+        text-align: center;
+        font-size: 18px;
+        line-height: 25px;
+      }
     }
 
     .lawyer-img {
@@ -1876,14 +1882,32 @@ About Page Styles
       padding-top: 80px;
     }
 
+    @media @xs {
+      height: 420px;
+      padding-top: 27px;
+    }
+
     > h2 {
       background: url("../images/sep-5.png") no-repeat 0 100%;
       padding-bottom: 40px;
       margin-bottom: 35px;
+
+      @media @xs {
+        background-position: 50% 100%;
+        text-align: center;
+        padding-bottom: 19px;
+        margin-bottom: 19px;
+      }
     }
 
     .lawyer-img {
       bottom: -135px;
+
+      @media @xs {
+        bottom: -75px;
+        margin-left: -230px;
+        width: 350px;
+      }
     }
   }
 }
@@ -1922,6 +1946,10 @@ About Page Styles
     .my-badge {
       width: 25%;
       line-height: 103px;
+
+      @media @xs {
+        width: 50%;
+      }
     }
   }
 
@@ -1937,6 +1965,11 @@ About Page Styles
 
       @media @small {
         font-size: 21px;
+      }
+
+      @media @xs {
+        font-size: 22px;
+        line-height: 31px;
       }
     }
 
