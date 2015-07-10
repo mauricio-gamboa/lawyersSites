@@ -554,9 +554,6 @@ Header Home Styles
 }
 .header .header-home,
 .header .header-about {
-  font-family: 'Lato-Bold';
-  color: white;
-  font-weight: normal;
   position: relative;
   padding-left: 445px;
 }
@@ -572,77 +569,96 @@ Header Home Styles
     padding: 0;
   }
 }
+.header .header-home,
+.header .header-about,
+.header .header-location {
+  font-family: 'Lato-Bold';
+  color: white;
+  font-weight: normal;
+}
 .header .header-home > h1,
-.header .header-about > h1 {
+.header .header-about > h1,
+.header .header-location > h1 {
   font-size: 64px;
   line-height: 54px;
 }
 @media (max-width: 767px) {
   .header .header-home > h1,
-  .header .header-about > h1 {
+  .header .header-about > h1,
+  .header .header-location > h1 {
     font-size: 41px;
     line-height: 31px;
   }
 }
 .header .header-home > h1 span,
-.header .header-about > h1 span {
+.header .header-about > h1 span,
+.header .header-location > h1 span {
   font-family: 'PalatinoLTStd-BoldItalic';
 }
 .header .header-home > h2,
-.header .header-about > h2 {
+.header .header-about > h2,
+.header .header-location > h2 {
   text-transform: uppercase;
   font-size: 35px;
   line-height: normal;
 }
 @media (max-width: 767px) {
   .header .header-home > h2,
-  .header .header-about > h2 {
+  .header .header-about > h2,
+  .header .header-location > h2 {
     font-size: 18px;
   }
 }
 .header .header-home > h3,
-.header .header-about > h3 {
+.header .header-about > h3,
+.header .header-location > h3 {
   font-family: 'Lato-Regular';
   font-size: 26px;
   line-height: 32px;
 }
 @media (min-width: 768px) and (max-width: 992px) {
   .header .header-home > h3,
-  .header .header-about > h3 {
+  .header .header-about > h3,
+  .header .header-location > h3 {
     font-size: 22px;
     line-height: 31px;
   }
 }
 @media (max-width: 767px) {
   .header .header-home > h3,
-  .header .header-about > h3 {
+  .header .header-about > h3,
+  .header .header-location > h3 {
     text-align: center;
     font-size: 18px;
     line-height: 25px;
   }
 }
 .header .header-home .lawyer-img,
-.header .header-about .lawyer-img {
+.header .header-about .lawyer-img,
+.header .header-location .lawyer-img {
   position: absolute;
   bottom: 0;
   left: -150px;
 }
 @media (min-width: 768px) and (max-width: 992px) {
   .header .header-home .lawyer-img,
-  .header .header-about .lawyer-img {
+  .header .header-about .lawyer-img,
+  .header .header-location .lawyer-img {
     left: -400px;
   }
 }
 @media (max-width: 767px) {
   .header .header-home .lawyer-img,
-  .header .header-about .lawyer-img {
+  .header .header-about .lawyer-img,
+  .header .header-location .lawyer-img {
     width: 500px;
     left: 50%;
     margin-left: -300px;
   }
 }
 .header .header-home .lines,
-.header .header-about .lines {
+.header .header-about .lines,
+.header .header-location .lines {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -1113,6 +1129,19 @@ Badges Styles
 Locations Styles
 ****************************
 ***************************/
+#header-location.location-1 {
+  background: url("../images/bg-location-1.png") no-repeat 0 0 / cover;
+}
+#header-location .header-location {
+  height: 195px;
+  padding-top: 55px;
+}
+#header-location .header-location h1 {
+  font-size: 30px;
+  line-height: normal;
+  text-shadow: 0 0 4px black;
+  text-transform: uppercase;
+}
 .location {
   font-size: 15px;
   line-height: 21px;
@@ -1741,16 +1770,16 @@ About Page Styles
   color: #5ba65a;
 }
 .sidebar .widget h4 {
-  font-size: 15px;
+  font-size: 16px;
   color: #243c95;
   line-height: 30px;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
 .sidebar .widget h4 span {
-  color: #e61919;
+  color: #67be66;
   font-size: 24px;
-  margin-right: 10px;
+  margin-right: 8px;
   vertical-align: middle;
 }
 .sidebar .widget p {
@@ -1943,13 +1972,6 @@ Location Styles
     margin-top: 20px;
   }
 }
-.office-meta-data .location > div + div h4 {
-  margin-top: 0;
-  line-height: 44px;
-  padding-bottom: 29px;
-  margin-bottom: 26px;
-  text-align: left;
-}
 @media (min-width: 768px) and (max-width: 992px) {
   .office-meta-data .location > div + div h4 {
     padding-bottom: 0;
@@ -1964,6 +1986,8 @@ Location Styles
 }
 .office-meta-data .location > div + div .btn-1 {
   float: right;
+  position: relative;
+  z-index: 10;
 }
 .office-meta-data .location > div + div address,
 .office-meta-data .location > div + div .phone {

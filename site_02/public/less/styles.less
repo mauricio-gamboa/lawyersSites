@@ -768,9 +768,6 @@ Header Home Styles
 
   .header-home,
   .header-about {
-    font-family: 'Lato-Bold';
-    color: white;
-    font-weight: normal;
     position: relative;
     padding-left: 445px;
 
@@ -781,6 +778,14 @@ Header Home Styles
     @media @xs {
       padding: 0;
     }
+  }
+
+  .header-home,
+  .header-about,
+  .header-location {
+    font-family: 'Lato-Bold';
+    color: white;
+    font-weight: normal;
 
     > h1 {
       font-size: 64px;
@@ -1381,6 +1386,25 @@ Badges Styles
 Locations Styles
 ****************************
 ***************************/
+
+#header-location {
+
+  &.location-1 {
+    background: url("../images/bg-location-1.png") no-repeat 0 0 / cover;
+  }
+
+  .header-location {
+    height: 195px;
+    padding-top: 55px;
+
+    h1 {
+      font-size: 30px;
+      line-height: normal;
+      text-shadow: 0 0 4px black;
+      text-transform: uppercase;
+    }
+  }
+}
 
 .location {
   font-size: 15px;
@@ -2040,16 +2064,16 @@ About Page Styles
     }
 
     h4 {
-      font-size: 15px;
+      font-size: 16px;
       color: @blue-6;
       line-height: 30px;
       margin-bottom: 20px;
       text-transform: uppercase;
 
       span {
-        color: @red-1;
+        color: @green-1;
         font-size: 24px;
-        margin-right: 10px;
+        margin-right: 8px;
         vertical-align: middle;
       }
     }
@@ -2283,12 +2307,6 @@ Location Styles
         }
 
         h4 {
-          margin-top: 0;
-          line-height: 44px;
-          padding-bottom: 29px;
-          margin-bottom: 26px;
-          text-align: left;
-
           @media @small {
             padding-bottom: 0;
           }
@@ -2302,6 +2320,8 @@ Location Styles
 
         .btn-1 {
           float: right;
+          position: relative;
+          z-index: 10;
         }
 
         address, .phone {
