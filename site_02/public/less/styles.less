@@ -1835,6 +1835,12 @@ Click Here Styles
       vertical-align: middle;
     }
 
+    > h3 {
+      @media @small {
+        display: block;
+      }
+    }
+
     &.middle {
       @media @xs {
         .border-top(1px, @blue-13);
@@ -2076,10 +2082,18 @@ About Page Styles
         margin-right: 8px;
         vertical-align: middle;
       }
+
+      @media @small {
+        font-size: 13px;
+      }
     }
 
     p {
       .font-1;
+
+      @media @small {
+        font-size: 15px;
+      }
     }
 
     address {
@@ -2307,10 +2321,6 @@ Location Styles
         }
 
         h4 {
-          @media @small {
-            padding-bottom: 0;
-          }
-
           @media @xs {
             text-align: center;
             padding-bottom: 0;

@@ -1552,6 +1552,11 @@ Click Here Styles
 #click-here .click-here-item > * {
   vertical-align: middle;
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  #click-here .click-here-item > h3 {
+    display: block;
+  }
+}
 @media (max-width: 767px) {
   #click-here .click-here-item.middle {
     border-top: 1px solid #3a50a0;
@@ -1782,9 +1787,19 @@ About Page Styles
   margin-right: 8px;
   vertical-align: middle;
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  .sidebar .widget h4 {
+    font-size: 13px;
+  }
+}
 .sidebar .widget p {
   font-size: 16px;
   line-height: 31px;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .sidebar .widget p {
+    font-size: 15px;
+  }
 }
 .sidebar .widget address {
   margin: 0;
@@ -1970,11 +1985,6 @@ Location Styles
 @media (max-width: 767px) {
   .office-meta-data .location > div + div {
     margin-top: 20px;
-  }
-}
-@media (min-width: 768px) and (max-width: 992px) {
-  .office-meta-data .location > div + div h4 {
-    padding-bottom: 0;
   }
 }
 @media (max-width: 767px) {
