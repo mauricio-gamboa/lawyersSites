@@ -405,26 +405,14 @@ Buttons Styles
   }
 
   &.btn-2 {
-    background: url('../images/bg-btn-2.jpg') repeat-x 0 0;
+    background-color: @green-1;
     height: 56px;
     line-height: 56px;
-    padding-right: 0;
-    padding-left: 23px;
+    padding: 0 23px;
     font-size: 17px;
 
-    > span {
-      float: right;
-      background: url('../images/bg-btn-2.jpg') repeat-x 0 -112px;
-      width: 55px;
-      text-align: center;
-      margin-left: 23px;
-      font-size: 20px;
-      border-top-right-radius: 4px;
-      border-bottom-right-radius: 4px;
-    }
-
     &:hover {
-      background-position: 0 -56px;
+      background-color: @green-2;
     }
   }
 
@@ -733,7 +721,6 @@ Main Menu Styles
 
     > span {
       &.phone {
-        font-family: 'Lato-Regular';
         font-size: 19px;
         color: @green-1;
 
@@ -1205,6 +1192,7 @@ Client Reviews Styles
 
   p {
     .font-1;
+    line-height: 27px;
     color: @gray-3;
 
     &:last-child {
@@ -1295,6 +1283,7 @@ Badges Styles
 
   p {
     .font-1;
+    line-height: 26px;
     text-align: left;
   }
 
@@ -2584,7 +2573,7 @@ Blog Detail Styles
     margin-bottom: 30px;
 
     span {
-      color: @red-1;
+      color: @green-1;
       font-size: 24px;
       margin-right: 13px;
     }
