@@ -768,9 +768,6 @@ Header Home Styles
 
   .header-home,
   .header-about {
-    font-family: 'Lato-Bold';
-    color: white;
-    font-weight: normal;
     position: relative;
     padding-left: 445px;
 
@@ -781,6 +778,14 @@ Header Home Styles
     @media @xs {
       padding: 0;
     }
+  }
+
+  .header-home,
+  .header-about,
+  .header-location {
+    font-family: 'Lato-Bold';
+    color: white;
+    font-weight: normal;
 
     > h1 {
       font-size: 64px;
@@ -1382,6 +1387,30 @@ Locations Styles
 ****************************
 ***************************/
 
+#header-location {
+
+  &.location-1 {
+    background: url("../images/bg-location-1.png") no-repeat 0 0 / cover;
+  }
+
+  .header-location {
+    height: 195px;
+    padding-top: 55px;
+
+    h1 {
+      font-size: 30px;
+      line-height: normal;
+      text-shadow: 0 0 4px black;
+      text-transform: uppercase;
+
+      @media @xs {
+        font-size: 25px;
+        text-align: center;
+      }
+    }
+  }
+}
+
 .location {
   font-size: 15px;
   line-height: 21px;
@@ -1811,6 +1840,12 @@ Click Here Styles
       vertical-align: middle;
     }
 
+    > h3 {
+      @media @small {
+        display: block;
+      }
+    }
+
     &.middle {
       @media @xs {
         .border-top(1px, @blue-13);
@@ -1974,7 +2009,7 @@ About Page Styles
     }
 
     span {
-      color: @red-1;
+      color: @green-1;
     }
   }
 
@@ -2040,22 +2075,30 @@ About Page Styles
     }
 
     h4 {
-      font-size: 15px;
+      font-size: 16px;
       color: @blue-6;
       line-height: 30px;
       margin-bottom: 20px;
       text-transform: uppercase;
 
       span {
-        color: @red-1;
+        color: @green-1;
         font-size: 24px;
-        margin-right: 10px;
+        margin-right: 8px;
         vertical-align: middle;
+      }
+
+      @media @small {
+        font-size: 13px;
       }
     }
 
     p {
       .font-1;
+
+      @media @small {
+        font-size: 15px;
+      }
     }
 
     address {
@@ -2248,6 +2291,12 @@ Location Styles
 .office-meta-data {
   .location {
     > div {
+      &:first-child {
+        @media @xs {
+          display: none;
+        }
+      }
+
       > img {
         width: 170px;
         margin-right: 30px;
@@ -2278,30 +2327,26 @@ Location Styles
           width: auto;
         }
 
-        @media @xs {
-          margin-top: 20px;
-        }
-
         h4 {
-          margin-top: 0;
-          line-height: 44px;
-          padding-bottom: 29px;
-          margin-bottom: 26px;
-          text-align: left;
-
-          @media @small {
-            padding-bottom: 0;
-          }
-
           @media @xs {
-            text-align: center;
-            padding-bottom: 0;
-            margin-bottom: 12px;
+            text-align: left;
+            padding-left: 52px;
+
+            img {
+              display: block;
+            }
           }
         }
 
         .btn-1 {
           float: right;
+          position: relative;
+          z-index: 10;
+          margin: 0;
+
+          @media @xs {
+            float: left;
+          }
         }
 
         address, .phone {
@@ -2337,6 +2382,12 @@ Location Styles
           }
         }
       }
+    }
+
+    @media @xs {
+      border-bottom: none;
+      margin: 0;
+      padding-bottom: 0;
     }
   }
 
