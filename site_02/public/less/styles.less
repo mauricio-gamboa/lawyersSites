@@ -460,13 +460,13 @@ Buttons Styles
   }
 
   &.link-1 {
-    color: @red-1;
+    color: @green-1;
     font-size: 15px;
     font-family: 'proxima_nova_bold';
     text-transform: uppercase;
 
     &:hover {
-      color: @red-2;
+      color: @green-2;
     }
   }
 }
@@ -761,40 +761,25 @@ Header Home Styles
 ***************************/
 
 .header {
-  position: relative;
-}
-
-#header-home {
   background: url("../images/bg-header-home.png") no-repeat 50% 100%;
   background-size: cover;
   overflow: hidden;
+  position: relative;
 
-  .header-home {
+  .header-home,
+  .header-about {
     font-family: 'Lato-Bold';
-    position: relative;
-    padding-left: 400px;
     color: white;
     font-weight: normal;
-    padding-top: 67px;
-    height: 595px;
+    position: relative;
+    padding-left: 445px;
 
     @media @small {
       padding-left: 205px;
     }
 
     @media @xs {
-      padding: 38px 0 0 0;
-      text-align: center;
-    }
-
-    > h2 {
-      text-transform: uppercase;
-      font-size: 35px;
-      line-height: normal;
-
-      @media @xs {
-        font-size: 18px;
-      }
+      padding: 0;
     }
 
     > h1 {
@@ -809,6 +794,61 @@ Header Home Styles
       span {
         font-family: 'PalatinoLTStd-BoldItalic';
       }
+    }
+
+    > h2 {
+      text-transform: uppercase;
+      font-size: 35px;
+      line-height: normal;
+
+      @media @xs {
+        font-size: 18px;
+      }
+    }
+
+    > h3 {
+      font-family: 'Lato-Regular';
+      font-size: 26px;
+      line-height: 32px;
+    }
+
+    .lawyer-img {
+      position: absolute;
+      bottom: 0;
+      left: -150px;
+
+      @media @small {
+        left: -400px;
+      }
+
+      @media @xs {
+        width: 500px;
+        left: 50%;
+        margin-left: -300px;
+      }
+    }
+
+    .lines {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -1800px;
+    }
+  }
+}
+
+#header-home {
+  .header-home {
+    padding-top: 65px;
+    height: 595px;
+
+    @media @small {
+      padding-left: 205px;
+    }
+
+    @media @xs {
+      padding: 38px 0 0 0;
+      text-align: center;
     }
 
     .how-much-owe {
@@ -863,29 +903,6 @@ Header Home Styles
       .btn-1 {
         width: 182px;
       }
-    }
-
-    .lawyer-img {
-      position: absolute;
-      bottom: 0;
-      left: -200px;
-
-      @media @small {
-        left: -400px;
-      }
-
-      @media @xs {
-        width: 500px;
-        left: 50%;
-        margin-left: -300px;
-      }
-    }
-
-    .lines {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      margin-left: -1800px;
     }
 
     .button-wrapper {
@@ -950,6 +967,13 @@ Overview Styles
   text-transform: uppercase;
   padding-bottom: 30px;
   margin-bottom: 30px;
+  line-height: normal;
+
+  > span {
+    display: block;
+    font-size: 15px;
+    color: @gray-10;
+  }
 
   @media @xs {
     text-align: center;
@@ -1403,12 +1427,6 @@ Locations Styles
           display: none;
         }
       }
-
-      > span {
-        display: block;
-        font-size: 15px;
-        color: @gray-10;
-      }
     }
 
     p {
@@ -1826,137 +1844,29 @@ About Page Styles
 ****************************
 ***************************/
 
-#header-about {
-  background: url("../images/bg-about.png") no-repeat 50% 100%;
-  overflow: hidden;
-
-  .header-about {
-    position: relative;
-    height: 560px;
-
-    @media @xs {
-      height: 657px;
-    }
-
-    .lawyer-img {
-      position: absolute;
-      bottom: 0;
-      left: 90px;
-
-      @media @medium {
-        left: 0;
-      }
-
-      @media @small {
-        left: -135px;
-      }
-
-      @media @xs {
-        width: 344px;
-        left: 50%;
-        margin-left: -172px;
-      }
-    }
-
-    .sep-star {
-      position: absolute;
-      bottom: 158px;
-      left: 570px;
-
-      @media @medium {
-        left: 470px;
-      }
-
-      @media @small {
-        left: 360px;
-      }
-
-      @media @xs {
-        left: 0;
-        bottom: auto;
-        top: 208px;
-      }
-    }
-
-    .about-meta-data {
-      width: 50%;
-      float: right;
-
-      @media @xs {
-        float: none;
-        width: 100%;
-      }
-
-      h1 {
-        background: url("../images/bg-about-title.png") repeat-x 0 0;
-        color: white;
-        font-size: 50px;
-        left: 570px;
-        line-height: 81px;
-        padding-left: 23px;
-        position: absolute;
-        top: 120px;
-        width: 100%;
-
-        @media @medium {
-          left: 470px;
-        }
-
-        @media @small {
-          left: 360px;
-        }
-
-        @media @xs {
-          width: 150%;
-          line-height: 58px;
-          left: 0;
-          top: 25px;
-          font-size: 37px;
-        }
-      }
-
-      blockquote {
-        margin: 270px 0 0 0;
-        padding-bottom: 62px;
-
-        @media @small {
-          margin: 250px 0 0 0;
-        }
-
-        @media @xs {
-          font-size: 21px;
-          line-height: 29px;
-          margin: 105px 0 0 0;
-          padding-bottom: 0;
-        }
-
-        & + .cite {
-          margin-top: 30px;
-
-          @media @small {
-            margin-top: 0;
-          }
-
-          @media @xs {
-            background: url("../images/bg-quote.png") no-repeat 0 0;
-            width: 150%;
-            margin-top: 10px;
-            padding-top: 25px;
-
-            p {
-              font-size: 15px;
-            }
-          }
-        }
-      }
+#content {
+  #as-seen-on {
+    h2 {
+      .border-top(2px, @gray-13);
     }
   }
 }
 
-#content {
-  #as-seen-on {
-    .border-top(2px, @gray-1);
-    margin-top: 35px;
+#header-about {
+
+  .header-about {
+    height: 415px;
+    padding-top: 90px;
+
+    > h2 {
+      background: url("../images/sep-5.png") no-repeat 0 100%;
+      padding-bottom: 40px;
+      margin-bottom: 35px;
+    }
+
+    .lawyer-img {
+      bottom: -135px;
+    }
   }
 }
 
@@ -1975,6 +1885,8 @@ About Page Styles
 
       &.lead {
         font-family: 'Lato-Bold';
+        background: url("../images/sep-5.png") no-repeat 0 100%;
+        padding-bottom: 20px;
       }
     }
   }
@@ -1987,7 +1899,12 @@ About Page Styles
     .border-top(2px, @gray-13);
     .border-bottom(2px, @gray-13);
     padding: 25px 0;
-    margin-bottom: 30px
+    margin-bottom: 30px;
+
+    .my-badge {
+      width: 25%;
+      line-height: 103px;
+    }
   }
 
   p, li {
@@ -2043,6 +1960,15 @@ About Page Styles
   padding: 30px 0;
   color: @gray-8;
 
+  > h4 {
+    font-family: 'Lato-Bold';
+    text-transform: uppercase;
+    margin: 0 0 30px 0;
+    font-size: 19px;
+    color: @blue-6;
+    text-align: center;
+  }
+
   .widget {
     font-size: 15px;
     padding: 0 30px 30px 30px;
@@ -2050,10 +1976,10 @@ About Page Styles
     .border-bottom(1px, @gray-14);
 
     a {
-      color: @red-1;
+      color: @green-1;
 
       &:hover {
-        color: @red-2;
+        color: @green-2;
       }
     }
 
@@ -2108,25 +2034,8 @@ About Page Styles
       > div {
         float: none;
 
-        img {
-          float: left;
-          width: 59px;
-          margin-right: 18px;
-
-          & + h4 {
-            margin: 0;
-            padding: 0;
-            line-height: 59px;
-            font-size: 16px;
-            border-bottom: none;
-            text-align: left;
-          }
-        }
-
-        &:first-child {
-          .border-bottom(2px, @gray-14);
-          padding-bottom: 15px;
-          margin-bottom: 24px;
+        h4 {
+          .site-subtitle;
         }
       }
     }
@@ -2244,7 +2153,7 @@ About Page Styles
     margin-bottom: 20px;
 
     span {
-      color: @red-1;
+      color: @green-1;
       margin-right: 10px;
     }
   }
@@ -2253,7 +2162,8 @@ About Page Styles
 .testimonials-slider {
   .testimonial {
     p {
-      .font-1;
+      font-size: 15px;
+      line-height: 23px;
     }
   }
 }

@@ -1,28 +1,52 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="Site_01">
+<html lang="en" ng-app="Site_02">
 <head>
-  <title>Site_01 - About</title>
+  <title>Site_02 - About</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="public/styles/libs.min.css">
   <link rel="stylesheet" href="public/styles/styles.min.css">
   <!--<link rel="stylesheet" href="public/styles/styles.css">-->
 </head>
-<body scroll-top>
-<nav id="main-menu" change-menu>
+<body>
+<header id="top-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h1 class="logo hide-xs"><a href="">Mackay, Caswell &amp; Callahan P.C</a></h1>
+
+        <h1 class="logo small show-xs"><a href="">Mackay, Caswell &amp; Callahan P.C</a></h1>
+
+        <div class="estimate hide-s hide-xs">
+          <a href="" class="my-btn btn-1">get a free estimate</a>
+        </div>
+        <div class="call clearfix hide-m hide-s hide-xs">
+          <span class="phone-icon"><i class="fa fa-phone"></i></span>
+          <span>
+            <span>call free toll</span>
+            <br/>
+            <span class="phone">844 - seanpark</span>
+          </span>
+        </div>
+        <div class="ratings hide-xs">
+          <img src="public/images/ratings.png" alt=""/>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<nav id="main-menu">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="menu-wrapper clearfix">
-          <div class="toggler show-s show-xs collapsed" data-toggle="collapse" data-target="#mobile-menu">
+
+          <div class="toggler show-xs collapsed" data-toggle="collapse" data-target="#mobile-menu">
             <i class="fa fa-bars"></i>
           </div>
-          <h1 class="logo">
-            <a href="">Sean Park Law</a>
-          </h1>
-          <ul class="list-unstyled main-menu clearfix hide-s hide-xs">
-            <li class="hide-m"><a href="">Home</a></li>
-            <li class="active"><a href="">About</a></li>
+          <a href="" class="my-btn btn-1 show-xs"><i class="fa fa-phone"></i> 844 - MCC - 4TAX</a>
+          <ul class="list-unstyled main-menu clearfix hide-xs">
+            <li class="hide-s"><a href="">Home</a></li>
             <li class="sub-menu">
               <a href="">Locations</a>
               <ul class="list-unstyled">
@@ -31,138 +55,125 @@
                 <li><a href="">Atlanta</a></li>
               </ul>
             </li>
-            <li><a href="">We Specialize In</a></li>
+            <li class="active"><a href="">Attorneys</a></li>
+            <li><a href="">Business Law</a></li>
+            <li><a href="">Tax Law</a></li>
             <li><a href="">Blog</a></li>
             <li><a href="">Contact Us</a></li>
           </ul>
-          <ul id="mobile-menu" class="main-menu-mobile list-unstyled collapse">
-            <li><a href="">Home</a></li>
-            <li class="active"><a href="">About</a></li>
-            <li><a href="">Locations</a></li>
-            <li><a href="">We Specialize In</a></li>
-            <li><a href="">Blog</a></li>
-            <li><a href="">Contact Us</a></li>
-          </ul>
-          <div class="call clearfix hide-xs">
-            <span class="phone-icon"><i class="fa fa-phone"></i></span>
-          <span>
-            <span>call free toll</span>
-            <br/>
-            <span class="phone">844 - seanpark</span>
-          </span>
-          </div>
         </div>
       </div>
     </div>
   </div>
 </nav>
+<nav id="mobile-menu" class="collapse">
+  <ul class="main-menu-mobile list-unstyled">
+    <li><a href="">Home</a></li>
+    <li class="active"><a href="">About</a></li>
+    <li><a href="">Locations</a></li>
+    <li><a href="">We Specialize In</a></li>
+    <li><a href="">Blog</a></li>
+    <li><a href="">Contact Us</a></li>
+  </ul>
+</nav>
 <header id="header-about" class="header">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <div class="header-about clearfix">
-          <img class="lawyer-img" src="public/images/lawyer-3.png" alt=""/>
-          <img class="sep-star hide-xs" src="public/images/bg-quote.png" alt=""/>
+        <div class="header-about">
+          <h2>meet joe</h2>
 
-          <div class="about-meta-data">
-            <h1>Meet Sean Park</h1>
-            <blockquote>
-              <p>We give each client and case the attention they deserve.”</p>
-            </blockquote>
-            <div class="cite">
-              <p>Sean Park</p>
-
-              <p>Founder &amp; Managing Partner</p>
-            </div>
-          </div>
+          <h3>Joseph M. Callahan, Esq., is an attorney with the law firm of Mackay, Caswell & Callahan, P. C. with
+            offices in both Rochester and Syracuse, New York. </h3>
+          <img src="public/images/lawyer-1.png" alt="" class="lawyer-img"/>
+          <img src="public/images/bg-lines.png" alt="" class="lines"/>
         </div>
       </div>
     </div>
   </div>
 </header>
-<section id="content" class="bg-lines-2 site-padding white-bg">
+<section id="content" class="site-padding white-bg">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8">
         <div class="content content-about">
-          <p class="lead">In his 15 years of practicing law, Sean has handled thousands of DUI cases and has a proven
-            track record of success in the courtroom on behalf of his clients in DUI cases, other criminal defense
-            matters as well as plaintiff’s personal injury cases.</p>
+          <p class="lead">Joe has 30 years of experience representing clients with serious tax disputes with the IRS and
+            New York State.</p>
 
-          <p>As a former prosecutor, Sean would frequently instruct prosecutors as well as police officers on the topic
-            of presenting effective and compelling testimony in the courtroom on DUI and other types of cases. During
-            his time in private practice, Sean frequently gives lectures to other lawyers on the topics of DUI, trial
-            presentation and effective jury selection. Sean also regularly appears as a legal analyst on CNN networks,
-            CBS Atlanta 46 and has been featured on nationally syndicated news and entertainment programs discussing
-            legal matters in current events.</p>
+          <p>Joe earned a B.S. in Public Relations from Syracuse University in 1981, and both a M.S. in Accounting and
+            Juris Doctor from Syracuse University in 1986.</p>
+
+          <p>While in law school, Joe was a member of the Moot Court Board and was its Chair from 1984 – 1985. He was
+            also awarded the prestigious Order of the Barristers, served as Moot Court Advisor to the Vice Chancellor
+            and the undergraduate Constitutional Law program and was a Research Assistant for the Law and Public Policy
+            Department of the business school.</p>
 
           <div class="badges clearfix">
-            <div class="my-badge"><img src="public/images/badge-1.png" alt=""/></div>
-            <div class="my-badge"><img src="public/images/badge-2.png" alt=""/></div>
-            <div class="my-badge"><img src="public/images/badge-3.png" alt=""/></div>
+            <div class="my-badge"><img src="public/images/badge-4.png" alt=""/></div>
+            <div class="my-badge"><img src="public/images/badge-5.png" alt=""/></div>
+            <div class="my-badge"><img src="public/images/badge-6.png" alt=""/></div>
+            <div class="my-badge"><img src="public/images/badge-7.png" alt=""/></div>
           </div>
 
-          <p>Over the course of his career, Sean has acquired extensive experience at all levels of court in the states
-            of Tennessee and Georgia. Additionally, Sean strives to develop and maintain good working relationships with
-            judges, prosecutors and their office staff. In some cases, these working relationships date back to the
-            beginning of Sean’s practice of law in 1999.</p>
+          <p>In addition to his professional career, Joe has taught law and lectured on legal matters at Syracuse
+            University and in numerous continuing legal education programs.</p>
 
-          <p>Sean is licensed and admitted to practice law before all state courts in the states of Tennessee and
-            Georgia, including the Supreme Court and Court of Appeals. He is also licensed to practice in the State of
-            Florida.</p>
+          <p>Joe has a broad range of experience, which he can bring to bear on behalf of his clients. Working in both
+            the accounting and legal worlds in tax controversy matters not only gives him a unique perspective, it
+            enables him to arrive at a solution in a timely and cost-effective manner.</p>
+
+          <p>Throughout his years as a CPA and attorney, Joe participated in several long-term audits and investigations
+            with specialized federal and New York State law enforcement agencies. Joe's extensive experience includes a
+            wide variety of high-profile investigations and prosecutions involving sales tax, income tax, tax fraud,
+            immigration fraud, responsible person assessments, alien harboring and wire fraud.</p>
+
+          <p>Joe also has extensive experience with commercial clients and lenders, having participated in numerous
+            commercial transactions, asset purchases and sales, stock sales and business formations. His tax background
+            has allowed him to successfully structure New York State-regulated bulk sales transactions, federal and
+            state tax offers in compromise and offshore voluntary disclosure program (OVDP) submissions.</p>
+
+          <p>Joe's achievements include the representation of several well-known New York residents and businesses for
+            tax evasion and tax fraud, as well as numerous lenders, businesses and individuals in commercial
+            transactions.</p>
         </div>
       </div>
       <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 hide-xs">
         <aside class="sidebar">
+          <h4>over 30 years of experience</h4>
           <div class="widget location">
-            <div class="clearfix">
-              <img src="public/images/location-1.png" alt=""/>
-              <h4>Nashville</h4>
-            </div>
             <div>
+              <h4 class="site-subtitle clearfix">
+                <img src="public/images/location-1-1.png" alt=""/>
+                Rochester
+                <span>new york</span>
+              </h4>
               <address>
                 <span class="marker-icon"><i class="fa fa-map-marker"></i></span>
 
-                <p>424 Church Street, Suite</p>
+                <p>7825 Fay Avenue, Suite 200</p>
 
-                <p>2000 Nashville, TN 37219</p>
+                <p>La Jolla, CA. 92037</p>
               </address>
-              <p class="phone"><span><i class="fa fa-phone"></i></span> 615-861-8977</p>
-              <a href="" class="my-link link-1">office details <i class="fa fa-chevron-right"></i></a>
+              <p class="phone"><span><i class="fa fa-phone"></i></span> 415-493-8677</p>
+              <a class="my-link link-1" href="">Office Details <i class="fa fa-arrow-right"></i></a>
             </div>
           </div>
           <div class="widget location">
             <div>
-              <img src="public/images/location-2.png" alt=""/>
-              <h4>franklin</h4>
-            </div>
-            <div>
+              <h4 class="site-subtitle clearfix">
+                <img src="public/images/location-2-1.png" alt=""/>
+                Syracuse
+                <span>new york</span>
+              </h4>
               <address>
                 <span class="marker-icon"><i class="fa fa-map-marker"></i></span>
 
-                <p>136 Fourth Ave. South</p>
+                <p>7825 Fay Avenue, Suite 200</p>
 
-                <p>Franklin, TN 37064</p>
+                <p>La Jolla, CA. 92037</p>
               </address>
-              <p class="phone"><span><i class="fa fa-phone"></i></span> 615-790-1778</p>
-              <a href="" class="my-link link-1">office details <i class="fa fa-chevron-right"></i></a>
-            </div>
-          </div>
-          <div class="widget location">
-            <div>
-              <img src="public/images/location-3.png" alt=""/>
-              <h4>atlanta</h4>
-            </div>
-            <div>
-              <address>
-                <span class="marker-icon"><i class="fa fa-map-marker"></i></span>
-
-                <p>3355 Lenox Road Suite</p>
-
-                <p>750 Atlanta, GA 30326</p>
-              </address>
-              <p class="phone"><span><i class="fa fa-phone"></i></span> 404-334-3251</p>
-              <a href="" class="my-link link-1">office details <i class="fa fa-chevron-right"></i></a>
+              <p class="phone"><span><i class="fa fa-phone"></i></span> 415-493-8677</p>
+              <a class="my-link link-1" href="">Office Details <i class="fa fa-arrow-right"></i></a>
             </div>
           </div>
         </aside>
@@ -212,7 +223,7 @@
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <section id="as-seen-on" class="site-padding-top">
           <div class="container">
-            <h2 class="star-title">As seen on</h2>
+            <h2 class="site-title">As seen on</h2>
 
             <div class="row">
               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -232,134 +243,157 @@
     </div>
   </div>
 </section>
-<div class="bg-gradient-1">
-  <div class="site-padding bg-lines-3">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-          <div id="client-reviews" class="gray-border-1">
-            <h2 class="star-title">Client reviews</h2>
+<section class="site-padding gray-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div id="client-reviews" class="gray-border-1">
+          <h2 class="site-subtitle">Client reviews</h2>
 
-            <div class="reviews-slider owl-carousel" owl-single-nav>
-              <div class="review-slide">
-                <h4><i class="fa fa-quote-left"></i> Someone I would trust for anything</h4>
+          <div class="reviews-slider owl-carousel" owl-single-nav>
+            <div class="review-slide">
+              <h4><i class="fa fa-quote-left"></i> Someone I would trust for anything</h4>
 
-                <p>When I first got into trouble I had no idea who to call for legal help. On the advice of a family
-                  friend I called Sean and from our first phone call I knew I had made the right decision. The final
-                  outcome of my case was more than I could have asked for. <i class="fa fa-quote-right"></i></p>
+              <p>When I first got into trouble I had no idea who to call for legal help. On the advice of a family
+                friend I called Sean and from our first phone call I knew I had made the right decision. The final
+                outcome of my case was more than I could have asked for. <i class="fa fa-quote-right"></i></p>
 
-                <p><strong>Travis</strong> from <strong>Avvo.com</strong></p>
+              <p><strong>Travis</strong> from <strong>Avvo.com</strong></p>
 
-                <p><img src="public/images/rating.png" alt=""/></p>
+              <p><img src="public/images/rating.png" alt=""/></p>
 
-                <p><img src="public/images/rating-logo.png" alt=""/></p>
-              </div>
-              <div class="review-slide">
-                <h4><i class="fa fa-quote-left"></i> Someone I would trust for anything</h4>
-
-                <p>When I first got into trouble I had no idea who to call for legal help. On the advice of a family
-                  friend I called Sean and from our first phone call I knew I had made the right decision. The final
-                  outcome of my case was more than I could have asked for. <i class="fa fa-quote-right"></i></p>
-
-                <p><strong>Travis</strong> from <strong>Avvo.com</strong></p>
-
-                <p><img src="public/images/rating.png" alt=""/></p>
-
-                <p><img src="public/images/rating-logo.png" alt=""/></p>
-              </div>
-              <div class="review-slide">
-                <h4><i class="fa fa-quote-left"></i> Someone I would trust for anything</h4>
-
-                <p>When I first got into trouble I had no idea who to call for legal help. On the advice of a family
-                  friend I called Sean and from our first phone call I knew I had made the right decision. The final
-                  outcome of my case was more than I could have asked for. <i class="fa fa-quote-right"></i></p>
-
-                <p><strong>Travis</strong> from <strong>Avvo.com</strong></p>
-
-                <p><img src="public/images/rating.png" alt=""/></p>
-
-                <p><img src="public/images/rating-logo.png" alt=""/></p>
-              </div>
-              <div class="review-slide">
-                <h4><i class="fa fa-quote-left"></i> Someone I would trust for anything</h4>
-
-                <p>When I first got into trouble I had no idea who to call for legal help. On the advice of a family
-                  friend I called Sean and from our first phone call I knew I had made the right decision. The final
-                  outcome of my case was more than I could have asked for. <i class="fa fa-quote-right"></i></p>
-
-                <p><strong>Travis</strong> from <strong>Avvo.com</strong></p>
-
-                <p><img src="public/images/rating.png" alt=""/></p>
-
-                <p><img src="public/images/rating-logo.png" alt=""/></p>
-              </div>
-              <div class="review-slide">
-                <h4><i class="fa fa-quote-left"></i> Someone I would trust for anything</h4>
-
-                <p>When I first got into trouble I had no idea who to call for legal help. On the advice of a family
-                  friend I called Sean and from our first phone call I knew I had made the right decision. The final
-                  outcome of my case was more than I could have asked for. <i class="fa fa-quote-right"></i></p>
-
-                <p><strong>Travis</strong> from <strong>Avvo.com</strong></p>
-
-                <p><img src="public/images/rating.png" alt=""/></p>
-
-                <p><img src="public/images/rating-logo.png" alt=""/></p>
-              </div>
+              <p><img src="public/images/rating-logo.png" alt=""/></p>
             </div>
-          </div>
+            <div class="review-slide">
+              <h4><i class="fa fa-quote-left"></i> Someone I would trust for anything</h4>
 
-          <div class="badges clearfix">
-            <div class="my-badge"><img src="public/images/badge-1.png" alt=""/></div>
-            <div class="my-badge"><img src="public/images/badge-2.png" alt=""/></div>
-            <div class="my-badge"><img src="public/images/badge-3.png" alt=""/></div>
-          </div>
-          <div class="facebook-plugin">
-            <img src="public/images/facebook-like.jpg" alt=""/>
+              <p>When I first got into trouble I had no idea who to call for legal help. On the advice of a family
+                friend I called Sean and from our first phone call I knew I had made the right decision. The final
+                outcome of my case was more than I could have asked for. <i class="fa fa-quote-right"></i></p>
+
+              <p><strong>Travis</strong> from <strong>Avvo.com</strong></p>
+
+              <p><img src="public/images/rating.png" alt=""/></p>
+
+              <p><img src="public/images/rating-logo.png" alt=""/></p>
+            </div>
+            <div class="review-slide">
+              <h4><i class="fa fa-quote-left"></i> Someone I would trust for anything</h4>
+
+              <p>When I first got into trouble I had no idea who to call for legal help. On the advice of a family
+                friend I called Sean and from our first phone call I knew I had made the right decision. The final
+                outcome of my case was more than I could have asked for. <i class="fa fa-quote-right"></i></p>
+
+              <p><strong>Travis</strong> from <strong>Avvo.com</strong></p>
+
+              <p><img src="public/images/rating.png" alt=""/></p>
+
+              <p><img src="public/images/rating-logo.png" alt=""/></p>
+            </div>
+            <div class="review-slide">
+              <h4><i class="fa fa-quote-left"></i> Someone I would trust for anything</h4>
+
+              <p>When I first got into trouble I had no idea who to call for legal help. On the advice of a family
+                friend I called Sean and from our first phone call I knew I had made the right decision. The final
+                outcome of my case was more than I could have asked for. <i class="fa fa-quote-right"></i></p>
+
+              <p><strong>Travis</strong> from <strong>Avvo.com</strong></p>
+
+              <p><img src="public/images/rating.png" alt=""/></p>
+
+              <p><img src="public/images/rating-logo.png" alt=""/></p>
+            </div>
+            <div class="review-slide">
+              <h4><i class="fa fa-quote-left"></i> Someone I would trust for anything</h4>
+
+              <p>When I first got into trouble I had no idea who to call for legal help. On the advice of a family
+                friend I called Sean and from our first phone call I knew I had made the right decision. The final
+                outcome of my case was more than I could have asked for. <i class="fa fa-quote-right"></i></p>
+
+              <p><strong>Travis</strong> from <strong>Avvo.com</strong></p>
+
+              <p><img src="public/images/rating.png" alt=""/></p>
+
+              <p><img src="public/images/rating-logo.png" alt=""/></p>
+            </div>
           </div>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-          <div id="contact-form">
-            <h2 class="star-title">How can I help you?</h2>
 
-            <p><strong>You can contact us using this form day or night, 24 hours a day, 7 days a week, 365 days a
-              year.</strong> You will hear back from one of our attorneys the same day or next day.</p>
+        <div class="badges clearfix">
+          <div class="my-badge"><img src="public/images/badge-1.png" alt=""/></div>
+          <div class="my-badge"><img src="public/images/badge-2.png" alt=""/></div>
+          <div class="my-badge"><img src="public/images/badge-3.png" alt=""/></div>
+        </div>
+        <div class="facebook-plugin">
+          <img src="public/images/facebook-like.jpg" alt=""/>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div id="contact-form">
+          <h2 class="site-subtitle">How can I help you?</h2>
 
-            <div class="my-form clearfix">
-              <form action="">
-                <div class="form-group">
-                  <label>Your Name</label>
-                  <input type="text" class="form-control">
-                </div>
-                <div class="form-group">
-                  <label>Your E-mail</label>
-                  <input type="email" class="form-control">
-                </div>
-                <div class="form-group">
-                  <label>Cell Phone</label>
-                  <input type="text" class="form-control">
-                </div>
-                <div class="form-group">
-                  <label>How can we help? <span>(Optional)</span></label>
-                  <textarea class="form-control" rows="5"></textarea>
-                </div>
-                <button type="submit" class="my-btn btn-2 clearfix">send message <span><i
-                  class="fa fa-chevron-right"></i></span>
-                </button>
-                <img src="public/images/form-image.jpg" alt=""/>
-              </form>
-            </div>
+          <p><strong>You can contact us using this form day or night, 24 hours a day, 7 days a week, 365 days a
+            year.</strong> You will hear back from one of our attorneys the same day or next day.</p>
+
+          <div class="my-form clearfix">
+            <form action="">
+              <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="form-group">
+                <label>Your E-mail</label>
+                <input type="email" class="form-control">
+              </div>
+              <div class="form-group">
+                <label>Cell Phone</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="form-group">
+                <label>How can we help? <span>(Optional)</span></label>
+                <textarea class="form-control" rows="5"></textarea>
+              </div>
+              <button type="submit" class="my-btn btn-1">send message <i class="fa fa-arrow-right"></i></button>
+              <img src="public/images/form-image.jpg" alt=""/>
+            </form>
           </div>
-          <div class="disclosure">
-            <p>If you would like to speak with a team member immediately, we are available 24/7 via LIVE CHAT — or via
-              phone toll-free from 8am – 10pm PST at: <span>844-seanpark</span></p>
+        </div>
+        <div class="disclosure">
+          <p>If you would like to speak with a team member immediately, we are available 24/7 via LIVE CHAT — or via
+            phone toll-free from 8am – 10pm PST at: <span>1 (866) 765-9188</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div id="click-here">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <div class="click-here-item">
+          <h3>schedule an appointment with us</h3>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+        <div class="click-here-item middle">
+          <div class="call clearfix">
+            <span class="phone-icon"><i class="fa fa-phone"></i></span>
+            <span><span>call free toll</span><br/><span class="phone">844-MCC-4TAX</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 no-bg">
+        <div class="click-here-item">
+          <div class="call clearfix">
+            <span class="phone-icon"><i class="fa fa-envelope"></i></span>
+            <span><span>send a message</span><br/><span class="phone"><a href="">Contact Us</a></span></span>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<footer id="footer" class="bg-lines-3">
+<footer id="footer" class="gray-bg">
   <div id="top">
     <div class="container">
       <div class="row">
@@ -424,20 +458,6 @@
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <div class="footer-info">
-            <div class="call clearfix">
-              <span class="phone-icon"><i class="fa fa-phone"></i></span><span><span>call free toll</span><br/><span
-              class="phone">844 - seanpark</span></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="middle show-xs">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <div class="footer-info">
             <img src="public/images/cards.png" alt=""/>
           </div>
         </div>
@@ -449,11 +469,13 @@
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <div class="footer-bottom clearfix">
-            <a href="http://goamv.com" target="_blank" class="powered hide-xs"><img src="public/images/zealous.png" alt=""/></a>
+            <a href="http://goamv.com" target="_blank" class="powered hide-xs"><img src="public/images/zealous.png"
+                                                                                    alt=""/></a>
 
             <p>Copyright &copy 2015. All rights reserved. <span>&bull;</span> <a href="">Terms of Use</a>
               <span>&bull;</span> <a href="">Privacy Policy</a></p>
-            <a href="http://goamv.com" target="_blank" class="powered show-xs"><img src="public/images/zealous.png" alt=""/></a>
+            <a href="http://goamv.com" target="_blank" class="powered show-xs"><img src="public/images/zealous.png"
+                                                                                    alt=""/></a>
           </div>
         </div>
       </div>

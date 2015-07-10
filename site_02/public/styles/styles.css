@@ -280,13 +280,13 @@ Buttons Styles
   text-decoration: none;
 }
 .my-link.link-1 {
-  color: #e61919;
+  color: #67be66;
   font-size: 15px;
   font-family: 'proxima_nova_bold';
   text-transform: uppercase;
 }
 .my-link.link-1:hover {
-  color: #b71616;
+  color: #5ba65a;
 }
 /***************************
 ****************************
@@ -547,20 +547,94 @@ Header Home Styles
 ****************************
 ***************************/
 .header {
-  position: relative;
-}
-#header-home {
   background: url("../images/bg-header-home.png") no-repeat 50% 100%;
   background-size: cover;
   overflow: hidden;
-}
-#header-home .header-home {
-  font-family: 'Lato-Bold';
   position: relative;
-  padding-left: 400px;
+}
+.header .header-home,
+.header .header-about {
+  font-family: 'Lato-Bold';
   color: white;
   font-weight: normal;
-  padding-top: 67px;
+  position: relative;
+  padding-left: 445px;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .header .header-home,
+  .header .header-about {
+    padding-left: 205px;
+  }
+}
+@media (max-width: 767px) {
+  .header .header-home,
+  .header .header-about {
+    padding: 0;
+  }
+}
+.header .header-home > h1,
+.header .header-about > h1 {
+  font-size: 64px;
+  line-height: 54px;
+}
+@media (max-width: 767px) {
+  .header .header-home > h1,
+  .header .header-about > h1 {
+    font-size: 41px;
+    line-height: 31px;
+  }
+}
+.header .header-home > h1 span,
+.header .header-about > h1 span {
+  font-family: 'PalatinoLTStd-BoldItalic';
+}
+.header .header-home > h2,
+.header .header-about > h2 {
+  text-transform: uppercase;
+  font-size: 35px;
+  line-height: normal;
+}
+@media (max-width: 767px) {
+  .header .header-home > h2,
+  .header .header-about > h2 {
+    font-size: 18px;
+  }
+}
+.header .header-home > h3,
+.header .header-about > h3 {
+  font-family: 'Lato-Regular';
+  font-size: 26px;
+  line-height: 32px;
+}
+.header .header-home .lawyer-img,
+.header .header-about .lawyer-img {
+  position: absolute;
+  bottom: 0;
+  left: -150px;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .header .header-home .lawyer-img,
+  .header .header-about .lawyer-img {
+    left: -400px;
+  }
+}
+@media (max-width: 767px) {
+  .header .header-home .lawyer-img,
+  .header .header-about .lawyer-img {
+    width: 500px;
+    left: 50%;
+    margin-left: -300px;
+  }
+}
+.header .header-home .lines,
+.header .header-about .lines {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1800px;
+}
+#header-home .header-home {
+  padding-top: 65px;
   height: 595px;
 }
 @media (min-width: 768px) and (max-width: 992px) {
@@ -573,29 +647,6 @@ Header Home Styles
     padding: 38px 0 0 0;
     text-align: center;
   }
-}
-#header-home .header-home > h2 {
-  text-transform: uppercase;
-  font-size: 35px;
-  line-height: normal;
-}
-@media (max-width: 767px) {
-  #header-home .header-home > h2 {
-    font-size: 18px;
-  }
-}
-#header-home .header-home > h1 {
-  font-size: 64px;
-  line-height: 54px;
-}
-@media (max-width: 767px) {
-  #header-home .header-home > h1 {
-    font-size: 41px;
-    line-height: 31px;
-  }
-}
-#header-home .header-home > h1 span {
-  font-family: 'PalatinoLTStd-BoldItalic';
 }
 #header-home .header-home .how-much-owe {
   width: 418px;
@@ -643,29 +694,6 @@ Header Home Styles
 }
 #header-home .header-home .how-much-owe .btn-1 {
   width: 182px;
-}
-#header-home .header-home .lawyer-img {
-  position: absolute;
-  bottom: 0;
-  left: -200px;
-}
-@media (min-width: 768px) and (max-width: 992px) {
-  #header-home .header-home .lawyer-img {
-    left: -400px;
-  }
-}
-@media (max-width: 767px) {
-  #header-home .header-home .lawyer-img {
-    width: 500px;
-    left: 50%;
-    margin-left: -300px;
-  }
-}
-#header-home .header-home .lines {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  margin-left: -1800px;
 }
 #header-home .header-home .button-wrapper {
   position: absolute;
@@ -725,6 +753,12 @@ Overview Styles
   text-transform: uppercase;
   padding-bottom: 30px;
   margin-bottom: 30px;
+  line-height: normal;
+}
+.site-subtitle > span {
+  display: block;
+  font-size: 15px;
+  color: #858a9a;
 }
 @media (max-width: 767px) {
   .site-subtitle {
@@ -1123,11 +1157,6 @@ Locations Styles
     display: none;
   }
 }
-.location > div .site-subtitle > span {
-  display: block;
-  font-size: 15px;
-  color: #858a9a;
-}
 .location > div p {
   margin: 0;
 }
@@ -1525,142 +1554,20 @@ Click Here Styles
 About Page Styles
 ****************************
 ***************************/
-#header-about {
-  background: url("../images/bg-about.png") no-repeat 50% 100%;
-  overflow: hidden;
+#content #as-seen-on h2 {
+  border-top: 2px solid #f0f1f6;
 }
 #header-about .header-about {
-  position: relative;
-  height: 560px;
+  height: 415px;
+  padding-top: 90px;
 }
-@media (max-width: 767px) {
-  #header-about .header-about {
-    height: 657px;
-  }
+#header-about .header-about > h2 {
+  background: url("../images/sep-5.png") no-repeat 0 100%;
+  padding-bottom: 40px;
+  margin-bottom: 35px;
 }
 #header-about .header-about .lawyer-img {
-  position: absolute;
-  bottom: 0;
-  left: 90px;
-}
-@media (min-width: 993px) and (max-width: 1200px) {
-  #header-about .header-about .lawyer-img {
-    left: 0;
-  }
-}
-@media (min-width: 768px) and (max-width: 992px) {
-  #header-about .header-about .lawyer-img {
-    left: -135px;
-  }
-}
-@media (max-width: 767px) {
-  #header-about .header-about .lawyer-img {
-    width: 344px;
-    left: 50%;
-    margin-left: -172px;
-  }
-}
-#header-about .header-about .sep-star {
-  position: absolute;
-  bottom: 158px;
-  left: 570px;
-}
-@media (min-width: 993px) and (max-width: 1200px) {
-  #header-about .header-about .sep-star {
-    left: 470px;
-  }
-}
-@media (min-width: 768px) and (max-width: 992px) {
-  #header-about .header-about .sep-star {
-    left: 360px;
-  }
-}
-@media (max-width: 767px) {
-  #header-about .header-about .sep-star {
-    left: 0;
-    bottom: auto;
-    top: 208px;
-  }
-}
-#header-about .header-about .about-meta-data {
-  width: 50%;
-  float: right;
-}
-@media (max-width: 767px) {
-  #header-about .header-about .about-meta-data {
-    float: none;
-    width: 100%;
-  }
-}
-#header-about .header-about .about-meta-data h1 {
-  background: url("../images/bg-about-title.png") repeat-x 0 0;
-  color: white;
-  font-size: 50px;
-  left: 570px;
-  line-height: 81px;
-  padding-left: 23px;
-  position: absolute;
-  top: 120px;
-  width: 100%;
-}
-@media (min-width: 993px) and (max-width: 1200px) {
-  #header-about .header-about .about-meta-data h1 {
-    left: 470px;
-  }
-}
-@media (min-width: 768px) and (max-width: 992px) {
-  #header-about .header-about .about-meta-data h1 {
-    left: 360px;
-  }
-}
-@media (max-width: 767px) {
-  #header-about .header-about .about-meta-data h1 {
-    width: 150%;
-    line-height: 58px;
-    left: 0;
-    top: 25px;
-    font-size: 37px;
-  }
-}
-#header-about .header-about .about-meta-data blockquote {
-  margin: 270px 0 0 0;
-  padding-bottom: 62px;
-}
-@media (min-width: 768px) and (max-width: 992px) {
-  #header-about .header-about .about-meta-data blockquote {
-    margin: 250px 0 0 0;
-  }
-}
-@media (max-width: 767px) {
-  #header-about .header-about .about-meta-data blockquote {
-    font-size: 21px;
-    line-height: 29px;
-    margin: 105px 0 0 0;
-    padding-bottom: 0;
-  }
-}
-#header-about .header-about .about-meta-data blockquote + .cite {
-  margin-top: 30px;
-}
-@media (min-width: 768px) and (max-width: 992px) {
-  #header-about .header-about .about-meta-data blockquote + .cite {
-    margin-top: 0;
-  }
-}
-@media (max-width: 767px) {
-  #header-about .header-about .about-meta-data blockquote + .cite {
-    background: url("../images/bg-quote.png") no-repeat 0 0;
-    width: 150%;
-    margin-top: 10px;
-    padding-top: 25px;
-  }
-  #header-about .header-about .about-meta-data blockquote + .cite p {
-    font-size: 15px;
-  }
-}
-#content #as-seen-on {
-  border-top: 2px solid #f5f5f5;
-  margin-top: 35px;
+  bottom: -135px;
 }
 .content-margin {
   margin-bottom: 20px;
@@ -1676,6 +1583,8 @@ About Page Styles
 }
 .content.content-about p.lead {
   font-family: 'Lato-Bold';
+  background: url("../images/sep-5.png") no-repeat 0 100%;
+  padding-bottom: 20px;
 }
 .content .office-meta-data {
   margin-bottom: 40px;
@@ -1685,6 +1594,10 @@ About Page Styles
   border-bottom: 2px solid #f0f1f6;
   padding: 25px 0;
   margin-bottom: 30px;
+}
+.content .badges .my-badge {
+  width: 25%;
+  line-height: 103px;
 }
 .content p,
 .content li {
@@ -1736,6 +1649,14 @@ About Page Styles
   padding: 30px 0;
   color: #303030;
 }
+.sidebar > h4 {
+  font-family: 'Lato-Bold';
+  text-transform: uppercase;
+  margin: 0 0 30px 0;
+  font-size: 19px;
+  color: #243c95;
+  text-align: center;
+}
 .sidebar .widget {
   font-size: 15px;
   padding: 0 30px 30px 30px;
@@ -1743,10 +1664,10 @@ About Page Styles
   border-bottom: 1px solid #e5e6eb;
 }
 .sidebar .widget a {
-  color: #e61919;
+  color: #67be66;
 }
 .sidebar .widget a:hover {
-  color: #b71616;
+  color: #5ba65a;
 }
 .sidebar .widget h4 {
   font-size: 15px;
@@ -1790,23 +1711,24 @@ About Page Styles
 .sidebar .widget.location > div {
   float: none;
 }
-.sidebar .widget.location > div img {
-  float: left;
-  width: 59px;
-  margin-right: 18px;
+.sidebar .widget.location > div h4 {
+  background: url("../images/sep-2.png") no-repeat 50% 100%;
+  font-size: 18px;
+  color: #243c95;
+  text-transform: uppercase;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  line-height: normal;
 }
-.sidebar .widget.location > div img + h4 {
-  margin: 0;
-  padding: 0;
-  line-height: 59px;
-  font-size: 16px;
-  border-bottom: none;
-  text-align: left;
+.sidebar .widget.location > div h4 > span {
+  display: block;
+  font-size: 15px;
+  color: #858a9a;
 }
-.sidebar .widget.location > div:first-child {
-  border-bottom: 2px solid #e5e6eb;
-  padding-bottom: 15px;
-  margin-bottom: 24px;
+@media (max-width: 767px) {
+  .sidebar .widget.location > div h4 {
+    text-align: center;
+  }
 }
 .sidebar .widget.map address {
   margin-bottom: 15px;
@@ -1886,12 +1808,12 @@ About Page Styles
   margin-bottom: 20px;
 }
 .testimonials h4 span {
-  color: #e61919;
+  color: #67be66;
   margin-right: 10px;
 }
 .testimonials-slider .testimonial p {
-  font-size: 16px;
-  line-height: 31px;
+  font-size: 15px;
+  line-height: 23px;
 }
 /***************************
 ****************************
