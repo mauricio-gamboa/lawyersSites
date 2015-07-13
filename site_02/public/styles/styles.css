@@ -345,6 +345,8 @@ Main Menu Styles
 @media (max-width: 767px) {
   #main-menu .menu-wrapper {
     margin-left: 0;
+    text-align: center;
+    padding-left: 68px;
   }
 }
 #main-menu .menu-wrapper .btn-1,
@@ -366,6 +368,7 @@ Main Menu Styles
 @media (max-width: 767px) {
   #main-menu .menu-wrapper .btn-1 {
     display: inline-block;
+    float: none;
   }
 }
 #main-menu .menu-wrapper .toggler {
@@ -399,7 +402,7 @@ Main Menu Styles
   line-height: 64px;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 0 38px;
+  padding: 0 37px;
   position: relative;
   z-index: 10;
 }
